@@ -1,6 +1,6 @@
 'use client';
 
-import services from '@/app/enums/services';
+import services from '@/data/services';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowDownRight } from 'react-icons/bs';

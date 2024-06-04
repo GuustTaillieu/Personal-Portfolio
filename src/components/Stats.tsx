@@ -1,6 +1,6 @@
 'use client';
 
-import stats from '@/app/enums/stats';
+import stats from '@/data/stats';
 import CountUp from 'react-countup';
 
 type Props = {};

@@ -1,18 +1,29 @@
 'use client';
 
 import { LINKS, ROUTES } from '@/app/enums/routes';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { CiMenuFries } from 'react-icons/ci';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Link from 'next/link';
+import { MouseEvent, useState } from 'react';
 
 type Props = {};
 
 const MobileNav = (props: Props) => {
 	const pathname = usePathname();
+	const [open, setOpen] = useState(false);
+	const router = useRouter();
+
+	function delayedNavigate(event: MouseEvent<any>, href: string): void {
+		event.preventDefault();
+		setOpen(false);
+		setTimeout(() => {
+			router.push(href);
+		}, 300);
+	}
 
 	return (
-		<Sheet>
+		<Sheet open={open} onOpenChange={setOpen}>
 			<SheetTrigger className='flex justify-center items-center'>
 				<CiMenuFries className='text-[2rem] text-accent' />
 			</SheetTrigger>
@@ -31,6 +42,7 @@ const MobileNav = (props: Props) => {
 						<Link
 							href={link.path}
 							key={link.path}
+							onClick={(e) => delayedNavigate(e, link.path)}
 							className={`${
 								pathname === link.path &&
 								'text-accent border-b-[1px] border-accent'
