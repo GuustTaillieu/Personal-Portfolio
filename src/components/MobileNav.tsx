@@ -30,7 +30,9 @@ const MobileNav = (props: Props) => {
 
 			<SheetContent side='full' className='flex flex-col'>
 				<div className='mt-32 mb-40 text-center text-2xl'>
-					<Link href={ROUTES.HOME}>
+					<Link
+						href={ROUTES.HOME}
+						onClick={(e) => delayedNavigate(e, ROUTES.HOME)}>
 						<h1 className='text-4xl font-semibold'>
 							Guust<span className='text-accent'>.</span>
 						</h1>
