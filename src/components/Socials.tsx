@@ -1,4 +1,4 @@
-import { socialIcons } from '@/app/enums/socials';
+import { socialIcons } from '@/data/socials';
 import Link from 'next/link';
 
 type Props = {
