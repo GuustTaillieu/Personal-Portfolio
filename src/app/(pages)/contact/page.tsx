@@ -12,6 +12,8 @@ import {
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { contactInfo } from '@/data/contact-info';
 
 type Props = {};
 
@@ -30,7 +32,7 @@ const ContactPage = (props: Props) => {
 			className='py-6'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row gap-7'>
-					<div className='xl:h-[54%] order-2 xl:order-none'>
+					<div className='xl:w-[54%] order-1 xl:order-none'>
 						<form className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
 							<h3 className='text-4xl text-accent'>
 								Let's work together
@@ -82,11 +84,37 @@ const ContactPage = (props: Props) => {
 								placeholder='Type your message here.'
 								className='h-[200px]'
 							/>
+							<Button
+								size='md'
+								className='max-w-40'
+								type='submit'>
+								Send Message
+							</Button>
 						</form>
 					</div>
 
 					{/* info */}
-					<div className='flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'></div>
+					<div className='flex-1 flex items-center xl:justify-end order-2 xl:order-none mb-8 xl:mb-0'>
+						<ul className='flex flex-col gap-10'>
+							{contactInfo.map((info, index) => (
+								<li
+									className='flex items-center gap-6'
+									key={info.title}>
+									<div className='size-[52px] xl:size-[72px] bg-primary-light text-accent rounded-md flex items-center justify-center'>
+										<info.icon className='text-[28px]' />
+									</div>
+									<div className='flex-1'>
+										<p className='text-white/60'>
+											{info.title}
+										</p>
+										<h3 className='text-xl'>
+											{info.value}
+										</h3>
+									</div>
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</motion.section>
