@@ -12,23 +12,23 @@ export const LINKS = [
 		path: '/resume',
 	},
 	{
-		name: 'projects',
-		path: '/projects',
+		name: 'events',
+		path: '/events',
 	},
 	// {
 	// 	name: 'work',
 	// 	path: '/work',
 	// },
-	// {
-	// 	name: 'contact',
-	// 	path: '/contact',
-	// },
+	{
+		name: 'contact',
+		path: '/contact',
+	},
 ] as const;
 
 export const ROUTES = {
 	HOME: '/',
 	CONTACT: '/contact',
-	PROJECTS: '/projects',
+	EVENTS: '/events',
 	RESUME: '/resume',
 	WORK: '/work',
 } as const;
