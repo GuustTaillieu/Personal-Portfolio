@@ -3,17 +3,9 @@
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { experience } from '@/data/experience';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import ExperienceList from './ExperienceList';
 import EducationList from './EducationList';
-import { skills } from '@/data/skills';
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipProvider,
-	TooltipTrigger,
-} from '@/components/ui/tooltip';
 import SkillsContent from './SkillsContent';
 import AboutContent from './AboutContent';
 
