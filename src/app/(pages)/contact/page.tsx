@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contact-info';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 type InputFields = {
 	firstName: string;
@@ -29,13 +30,31 @@ type InputFields = {
 type Props = {};
 
 const ContactPage = (props: Props) => {
-	const { register, handleSubmit } = useForm<InputFields>();
-	const [selectedService, setSelectedService] = useState<string | null>();
+	const { register, handleSubmit, reset } = useForm<InputFields>();
+	const [selectedService, setSelectedService] = useState<
+		string | undefined
+	>();
 
 	const onSubmit: SubmitHandler<InputFields> = (data) => {
 		if (selectedService) data.service = selectedService;
 		console.log(data);
-		// TODO: SEND DATA TO MY MAIL
+		emailjs
+			.send(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+				data,
+				process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+			)
+			.then(
+				(result) => {
+					console.log('Email sent successfully', result.text);
+					reset();
+					setSelectedService(undefined);
+				},
+				(error) => {
+					console.log('Email failed to send', error.text);
+				}
+			);
 	};
 
 	return (
@@ -85,13 +104,17 @@ const ContactPage = (props: Props) => {
 									{...register('email', { required: true })}
 								/>
 								<Input
-									type='text'
+									type='tel'
 									placeholder='Phone number'
 									{...register('phone', { required: true })}
 								/>
 							</div>
 
-							<Select>
+							<Select
+								onValueChange={(value) =>
+									setSelectedService(value)
+								}
+								value={selectedService}>
 								<SelectTrigger className='w-full'>
 									<SelectValue placeholder='Select a service' />
 								</SelectTrigger>
