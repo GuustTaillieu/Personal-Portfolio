@@ -14,10 +14,30 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contact-info';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { useState } from 'react';
+
+type InputFields = {
+	firstName: string;
+	lastName: string;
+	email: string;
+	phone: string;
+	message: string;
+	service?: string;
+};
 
 type Props = {};
 
 const ContactPage = (props: Props) => {
+	const { register, handleSubmit } = useForm<InputFields>();
+	const [selectedService, setSelectedService] = useState<string | null>();
+
+	const onSubmit: SubmitHandler<InputFields> = (data) => {
+		if (selectedService) data.service = selectedService;
+		console.log(data);
+		// TODO: SEND DATA TO MY MAIL
+	};
+
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -33,27 +53,42 @@ const ContactPage = (props: Props) => {
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row gap-7'>
 					<div className='xl:w-[54%] order-1 xl:order-none'>
-						<form className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
+						<form
+							onSubmit={handleSubmit(onSubmit)}
+							className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
 							<h3 className='text-4xl text-accent'>
 								Let's work together
 							</h3>
 							<p className='text-white/60'>
 								Lorem ipsum dolor sit, amet consectetur
-								adipisicing elit. Voluptatum repudiandae non,
-								assumenda inventore accusantium adipisci,
-								expedita placeat quidem reprehenderit possimus
-								totam voluptas fugiat. Id eius iste non quisquam
-								voluptatem cupiditate.
+								adipisicing elit.
 							</p>
 
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-								<Input type='text' placeholder='First Name' />
-								<Input type='text' placeholder='Last Name' />
+								<Input
+									type='text'
+									placeholder='First Name'
+									{...register('firstName', {
+										required: true,
+									})}
+								/>
+								<Input
+									type='text'
+									placeholder='Last Name'
+									{...register('lastName', {
+										required: true,
+									})}
+								/>
 								<Input
 									type='email'
 									placeholder='Email address'
+									{...register('email', { required: true })}
 								/>
-								<Input type='text' placeholder='Phone number' />
+								<Input
+									type='text'
+									placeholder='Phone number'
+									{...register('phone', { required: true })}
+								/>
 							</div>
 
 							<Select>
@@ -81,6 +116,7 @@ const ContactPage = (props: Props) => {
 							</Select>
 
 							<Textarea
+								{...register('message', { required: true })}
 								placeholder='Type your message here.'
 								className='h-[200px]'
 							/>
