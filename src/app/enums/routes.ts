@@ -29,6 +29,7 @@ export const ROUTES = {
 	HOME: '/',
 	CONTACT: '/contact',
 	EVENTS: '/events',
+	EVENT: (id: string) => `/events/${id}`,
 	RESUME: '/resume',
 	WORK: '/work',
 } as const;
