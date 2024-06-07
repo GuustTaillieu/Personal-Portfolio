@@ -1,4 +1,4 @@
-import { STAIR_AMOUNT } from '@/app/enums/stairs';
+import { STAIR_AMOUNT } from '@/app/constants/stairs';
 import { motion } from 'framer-motion';
 
 const stairAnimation = {

@@ -1,6 +1,6 @@
 'use client';
 
-import { LINKS } from '@/app/enums/routes';
+import { LINKS } from '@/app/constants/routes';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 

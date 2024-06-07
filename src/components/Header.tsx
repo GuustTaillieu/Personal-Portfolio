@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Nav from './Nav';
 import { Button } from './ui/button';
-import { ROUTES } from '@/app/enums/routes';
+import { ROUTES } from '@/app/constants/routes';
 import MobileNav from './MobileNav';
 
 type Props = {};
@@ -19,7 +19,7 @@ const Header = (props: Props) => {
 				{/* DESKTOP NAV */}
 				<div className='hidden xl:flex items-center gap-8'>
 					<Nav />
-					<Link href={ROUTES.HOME}>
+					<Link href={ROUTES.CONTACT}>
 						<Button>Hire me</Button>
 					</Link>
 				</div>

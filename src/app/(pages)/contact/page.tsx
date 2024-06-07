@@ -15,8 +15,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contact-info';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import services from '@/data/services';
+import { useSearchParams } from 'next/navigation';
 
 type InputFields = {
 	firstName: string;
@@ -34,10 +36,22 @@ const ContactPage = (props: Props) => {
 	const [selectedService, setSelectedService] = useState<
 		string | undefined
 	>();
+	const params = useSearchParams();
+	const serviceNum = params.get('service');
+	const serviceSelector = useRef<HTMLButtonElement>(null);
+
+	useEffect(() => {
+		if (serviceNum) {
+			const service = services.find(
+				(service) => service.num === serviceNum
+			);
+			if (service) setSelectedService(service.title);
+			serviceSelector.current?.focus();
+		}
+	}, [serviceNum]);
 
 	const onSubmit: SubmitHandler<InputFields> = (data) => {
 		if (selectedService) data.service = selectedService;
-		console.log(data);
 		emailjs
 			.send(
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -111,29 +125,27 @@ const ContactPage = (props: Props) => {
 							</div>
 
 							<Select
-								onValueChange={(value) =>
-									setSelectedService(value)
-								}
+								onValueChange={(value) => {
+									if (value) setSelectedService(value);
+								}}
 								value={selectedService}>
-								<SelectTrigger className='w-full'>
+								<SelectTrigger
+									ref={serviceSelector}
+									className='w-full'>
 									<SelectValue placeholder='Select a service' />
 								</SelectTrigger>
 								<SelectContent>
-									{/* TODO: CHANGE SERVICES */}
 									<SelectGroup>
 										<SelectLabel>
 											Select a service
 										</SelectLabel>
-										<SelectItem value='Web Design'>
-											Web Design
-										</SelectItem>
-										<SelectItem value='Web Development'>
-											Web Development
-										</SelectItem>
-										<SelectItem value='SEO'>SEO</SelectItem>
-										<SelectItem value='Marketing'>
-											Marketing
-										</SelectItem>
+										{services.map((service) => (
+											<SelectItem
+												key={service.num}
+												value={service.title}>
+												{service.title}
+											</SelectItem>
+										))}
 									</SelectGroup>
 								</SelectContent>
 							</Select>
