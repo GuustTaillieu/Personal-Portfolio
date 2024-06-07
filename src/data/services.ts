@@ -9,25 +9,25 @@ const services: Service[] = [
 		num: '01',
 		title: 'Web Development',
 		description:
-			'We build websites that serve as the marketing hub for your business. A website is important because it helps you establish credibility as a business.',
+			'I can help you build engaging websites that will help you reach potential customers and grow your business.',
 	},
 	{
 		num: '02',
 		title: 'Mobile App Development',
 		description:
-			'We develop mobile applications that allow your business to be streamlined and accessible to your customers at all times.',
+			'I can help you develop user-friendly mobile applications that will help you reach potential customers on the go.',
 	},
 	{
 		num: '03',
-		title: 'Digital Marketing',
+		title: 'Front End Development',
 		description:
-			'We help businesses develop a marketing strategy that will help them establish a strong online presence and reach potential customers.',
+			'I can help you build interactive and engaging user interfaces that satisfy your users and keep them coming back.',
 	},
 	{
 		num: '04',
-		title: 'SEO Optimization',
+		title: 'Back End Development',
 		description:
-			'We help businesses optimize their website to rank higher in search engines, making them more visible to potential customers.',
+			'I can help you build robust and scalable back-end systems that will help you manage your business efficiently.',
 	},
 ];
 
