@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import { useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { events } from '@/data/events';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
@@ -17,13 +17,12 @@ type Props = {};
 const EventPage = (props: Props) => {
 	const params = useParams();
 	const event = events.find((event) => event.num === params.id);
-	const container = useRef<HTMLDivElement>(null);
+	const windowSize = useRef(window.innerWidth);
 	const router = useRouter();
 
-	const slidesPerView = () => {
-		if (!container.current) return 2;
-		return Math.max(1, Math.floor(container.current.offsetWidth / 400));
-	};
+	const slidesPerView = useMemo(() => {
+		return Math.max(1, Math.floor(windowSize.current / 600));
+	}, [windowSize.current]);
 
 	if (!event) return redirect('/404');
 	return (
@@ -81,21 +80,22 @@ const EventPage = (props: Props) => {
 							<div className='border border-white/20' />
 						</div>
 					</div>
-					<div ref={container} className='w-full'>
-						<Swiper
-							spaceBetween={30}
-							slidesPerView={slidesPerView()}>
+					<div className='w-full'>
+						<Swiper spaceBetween={30} slidesPerView={slidesPerView}>
 							{event.images.map((image) => (
 								<SwiperSlide
 									key={image.src}
 									className='w-full mb-14'>
-									<div className='aspect-[3/2] relative group flex justify-center items-center bg-pink-50/20'>
+									<div className='aspect-[16/9] relative group flex justify-center items-center bg-pink-50/20'>
 										<div className='absolute inset-0 bg-black/10 z-10' />
 										<div className='relative w-full h-full'>
 											<Image
 												src={image.src}
 												alt={image.alt}
 												fill
+												placeholder='blur'
+												blurDataURL={image.src}
+												priority
 												className='object-cover'
 											/>
 										</div>
@@ -103,7 +103,7 @@ const EventPage = (props: Props) => {
 								</SwiperSlide>
 							))}
 							<WorkSliderBtns
-								amountVisible={slidesPerView()}
+								amountVisible={slidesPerView}
 								containerStyles='flex gap-2 absolute ring-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full max-xl:justify-between xl:w-max'
 								btnStyles='bg-accent hover:bg-accent-hover text-primary text-[22px] size-[44px] flex justify-center items-center transition-all'
 							/>
