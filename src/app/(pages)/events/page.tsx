@@ -55,7 +55,7 @@ const EventsPage = (props: Props) => {
 							<p className='text-xl text-accent'>{event.date}</p>
 
 							<div className='border border-white/20' />
-							<div className=''>
+							<div className='w-fit'>
 								<Link href={`/events/${event.num}`}>
 									<TooltipProvider delayDuration={100}>
 										<Tooltip>
@@ -74,18 +74,22 @@ const EventsPage = (props: Props) => {
 					<div className='w-full xl:w-1/2'>
 						<Swiper
 							spaceBetween={30}
+							lazyPreloadPrevNext={2}
 							slidesPerView={1}
-							className='xl:h-[520px] mb-12'
+							className='mb-12'
 							onSlideChange={handleSlideChange}>
 							{events.map((event) => (
-								<SwiperSlide key={event.num} className='w-full'>
-									<div className='h-[460px] relative group flex justify-center items-center bg-pink-50/20'>
+								<SwiperSlide
+									key={event.num}
+									className='w-full mb-14'>
+									<div className='aspect-[16/9] relative group flex justify-center items-center bg-pink-50/20'>
 										<div className='absolute inset-0 bg-black/10 z-10' />
 										<div className='relative w-full h-full'>
 											<Image
 												src={event.thumbnail}
 												alt={event.title}
 												fill
+												priority
 												className='object-cover'
 											/>
 										</div>
