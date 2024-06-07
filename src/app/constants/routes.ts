@@ -28,6 +28,7 @@ export const LINKS = [
 export const ROUTES = {
 	HOME: '/',
 	CONTACT: '/contact',
+	CONTACT_WITH_SERVICE: (service: string) => `/contact?service=${service}`,
 	EVENTS: '/events',
 	EVENT: (id: string) => `/events/${id}`,
 	RESUME: '/resume',

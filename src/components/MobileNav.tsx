@@ -1,11 +1,12 @@
 'use client';
 
-import { LINKS, ROUTES } from '@/app/enums/routes';
+import { LINKS, ROUTES } from '@/app/constants/routes';
 import { usePathname, useRouter } from 'next/navigation';
 import { CiMenuFries } from 'react-icons/ci';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Link from 'next/link';
 import { MouseEvent, useState } from 'react';
+import { Button } from './ui/button';
 
 type Props = {};
 
@@ -52,6 +53,11 @@ const MobileNav = (props: Props) => {
 							{link.name}
 						</Link>
 					))}
+					<Link
+						href={ROUTES.CONTACT}
+						onClick={(e) => delayedNavigate(e, ROUTES.CONTACT)}>
+						<Button>Hire me</Button>
+					</Link>
 				</nav>
 			</SheetContent>
 		</Sheet>

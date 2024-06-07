@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import WorkSliderBtns from '../WorkSliderBtns';
 import { redirect, useParams, useRouter } from 'next/navigation';
-import { ROUTES } from '@/app/enums/routes';
+import { ROUTES } from '@/app/constants/routes';
 import { Button } from '@/components/ui/button';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 

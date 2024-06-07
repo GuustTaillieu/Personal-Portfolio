@@ -1,5 +1,6 @@
 'use client';
 
+import { ROUTES } from '@/app/constants/routes';
 import services from '@/data/services';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -34,7 +35,9 @@ const ServicesPage = (props: Props) => {
 									{service.num}
 								</div>
 								<Link
-									href={service.href}
+									href={ROUTES.CONTACT_WITH_SERVICE(
+										service.num
+									)}
 									className='flex justify-center items-center hover:-rotate-[45deg] border-white border size-14 rounded-full group-hover:border-accent  transition-all duration-500'>
 									<BsArrowDownRight className='text-white text-2xl group-hover:text-accent transition-all duration-500' />
 								</Link>

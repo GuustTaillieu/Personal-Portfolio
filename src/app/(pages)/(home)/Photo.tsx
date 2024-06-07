@@ -1,8 +1,8 @@
 'use client';
 
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import config from '../../tailwind.config';
+import config from '../../../../tailwind.config';
 
 type Props = {};
 
