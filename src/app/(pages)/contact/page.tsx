@@ -90,11 +90,11 @@ const ContactPage = (props: Props) => {
 							onSubmit={handleSubmit(onSubmit)}
 							className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
 							<h3 className='text-4xl text-accent'>
-								Let's work together
+								Let&apos;s work together
 							</h3>
 							<p className='text-white/60'>
-								Lorem ipsum dolor sit, amet consectetur
-								adipisicing elit.
+								Have a project in mind or just want to say hi?
+								Feel free to drop me a message.
 							</p>
 
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-2'>

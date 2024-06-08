@@ -12,7 +12,7 @@ export default function Home() {
 					<div className='text-center 2xl:text-left order-2 2xl:order-none'>
 						<span className='text-2xl'>Software Developer</span>
 						<h1 className='h1 mb-6'>
-							Hello, I'm <br />{' '}
+							Hello, I&apos;m <br />{' '}
 							<span className='text-accent'>Guust Taillieu</span>
 						</h1>
 						<p className='max-w-[500px] text-base mb-9 text-white/80'>

@@ -22,7 +22,7 @@ const EventPage = (props: Props) => {
 
 	const slidesPerView = useMemo(() => {
 		return Math.max(1, Math.floor(windowSize.current / 600));
-	}, [windowSize.current]);
+	}, []);
 
 	if (!event) return redirect('/404');
 	return (
