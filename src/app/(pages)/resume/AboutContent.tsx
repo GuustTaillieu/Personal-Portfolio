@@ -1,3 +1,4 @@
+import ReadMoreText from '@/components/ReadMoreText';
 import { about } from '@/data/about';
 
 type Props = {};
@@ -17,7 +18,17 @@ const AboutContent = (props: Props) => {
 						<span className='text-white/60 text-base'>
 							{item.fieldName}:
 						</span>
-						<span className='text-xl'>{item.fieldValue}</span>
+						{item.href ? (
+							<a
+								href={item.href}
+								className='hover:text-accent transition-colors duration-300 group'>
+								<span className='text-xl border-b border-white/60 group-hover:border-accent/60 transition-colors duration-300 pb-[1px] w-fit'>
+									{item.fieldValue}
+								</span>
+							</a>
+						) : (
+							<span className='text-xl'>{item.fieldValue}</span>
+						)}
 					</li>
 				))}
 			</ul>

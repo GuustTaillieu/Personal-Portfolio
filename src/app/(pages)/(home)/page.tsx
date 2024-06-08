@@ -15,16 +15,15 @@ export default function Home() {
 							Hello, I'm <br />{' '}
 							<span className='text-accent'>Guust Taillieu</span>
 						</h1>
-						<p className='max-w-[500px] mb-9 text-white/80'>
-							I excel at crafting elegant digital experiences and
-							I am proficient in various of programming languages
-							and technologies
+						<p className='max-w-[500px] text-base mb-9 text-white/80'>
+							Crafting innovative digital solutions with expertise
+							in cutting-edge technologies.
 						</p>
 
 						<div className='flex flex-col 2xl:flex-row items-center gap-8'>
 							<Button
 								variant='outline'
-								size='lg'
+								size='md'
 								className='uppercase flex items-center gap-2'>
 								<span className=''>Download CV</span>
 								<FiDownload className='text-2xl' />
@@ -32,7 +31,8 @@ export default function Home() {
 							<div className='mb-8 2xl:mb-0'>
 								<Socials
 									containerStyles='flex gap-6'
-									iconStyles='size-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500'
+									linkStyles='size-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500'
+									iconStyles='text-xl'
 								/>
 							</div>
 						</div>

@@ -72,10 +72,16 @@ const EventPage = (props: Props) => {
 							<h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
 								{event.title}
 							</h2>
-							<p className='text-white/60 xl:columns-2'>
-								{event.description}
+							<p
+								className='text-white/60 xl:columns-2'
+								dangerouslySetInnerHTML={{
+									__html: event.description,
+								}}>
+								{/* {event.description} */}
 							</p>
-							<p className='text-xl text-accent'>{event.date}</p>
+							<p className='text-base text-accent'>
+								{event.date} · {event.location}
+							</p>
 
 							<div className='border border-white/20' />
 						</div>

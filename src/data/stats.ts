@@ -18,7 +18,7 @@ const stats = [
 	},
 	{
 		text: 'Companies worked',
-		number: 3,
+		number: 4,
 	},
 ] as Stat[];
 
