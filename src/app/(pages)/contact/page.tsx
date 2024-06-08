@@ -15,7 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contact-info';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import services from '@/data/services';
 import { useSearchParams } from 'next/navigation';
@@ -29,9 +29,15 @@ type InputFields = {
 	service?: string;
 };
 
-type Props = {};
+const ContactPage = () => {
+	return (
+		<Suspense>
+			<Contact />
+		</Suspense>
+	);
+};
 
-const ContactPage = (props: Props) => {
+const Contact = () => {
 	const { register, handleSubmit, reset } = useForm<InputFields>();
 	const [selectedService, setSelectedService] = useState<
 		string | undefined
@@ -82,7 +88,7 @@ const ContactPage = (props: Props) => {
 					ease: 'easeIn',
 				},
 			}}
-			className='py-6'>
+			className='py-6 min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row gap-7'>
 					<div className='xl:w-[54%] order-1 xl:order-none'>
@@ -90,11 +96,11 @@ const ContactPage = (props: Props) => {
 							onSubmit={handleSubmit(onSubmit)}
 							className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
 							<h3 className='text-4xl text-accent'>
-								Let's work together
+								Let&apos;s work together
 							</h3>
 							<p className='text-white/60'>
-								Lorem ipsum dolor sit, amet consectetur
-								adipisicing elit.
+								Have a project in mind or just want to say hi?
+								Feel free to drop me a message.
 							</p>
 
 							<div className='grid grid-cols-1 md:grid-cols-2 gap-2'>

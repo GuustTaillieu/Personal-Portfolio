@@ -6,13 +6,13 @@ import { FiDownload } from 'react-icons/fi';
 
 export default function Home() {
 	return (
-		<section className='h-full'>
+		<section className='h-full min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col 2xl:flex-row items-center justify-between 2xl:pt-8 2xl:pb-24'>
 					<div className='text-center 2xl:text-left order-2 2xl:order-none'>
 						<span className='text-2xl'>Software Developer</span>
 						<h1 className='h1 mb-6'>
-							Hello, I'm <br />{' '}
+							Hello, I&apos;m <br />{' '}
 							<span className='text-accent'>Guust Taillieu</span>
 						</h1>
 						<p className='max-w-[500px] text-base mb-9 text-white/80'>
@@ -41,8 +41,8 @@ export default function Home() {
 						<Photo />
 					</div>
 				</div>
+				<Stats />
 			</div>
-			<Stats />
 		</section>
 	);
 }
