@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 
 export default function Home() {
 	return (
-		<section className='h-full'>
+		<section className='h-full min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col 2xl:flex-row items-center justify-between 2xl:pt-8 2xl:pb-24'>
 					<div className='text-center 2xl:text-left order-2 2xl:order-none'>
@@ -41,8 +41,8 @@ export default function Home() {
 						<Photo />
 					</div>
 				</div>
+				<Stats />
 			</div>
-			<Stats />
 		</section>
 	);
 }

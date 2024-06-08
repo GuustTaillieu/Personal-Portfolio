@@ -32,7 +32,7 @@ type InputFields = {
 const ContactPage = () => {
 	return (
 		<Suspense>
-			<Contact />;
+			<Contact />
 		</Suspense>
 	);
 };
@@ -88,7 +88,7 @@ const Contact = () => {
 					ease: 'easeIn',
 				},
 			}}
-			className='py-6'>
+			className='py-6 min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row gap-7'>
 					<div className='xl:w-[54%] order-1 xl:order-none'>
