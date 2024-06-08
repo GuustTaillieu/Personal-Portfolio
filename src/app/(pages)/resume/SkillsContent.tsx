@@ -17,13 +17,13 @@ const SkillsContent = (props: Props) => {
 					{skills.description}
 				</p>
 			</div>
-			<ul className='grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 xl:gap-7'>
+			<ul className='grid grid-cols-4 gap-4 md:grid-cols-6 xl:gap-7'>
 				{skills.skillList.map((item) => (
 					<li key={item.name} className=''>
 						<TooltipProvider delayDuration={100}>
 							<Tooltip>
 								<TooltipTrigger className='w-full aspect-square bg-primary-light/60 rounded-xl flex justify-center items-center group'>
-									<item.icon className='text-6xl group-hover:text-accent transition-all duration-300' />
+									<item.icon className='text-6xl md:text-4xl group-hover:text-accent transition-all duration-300' />
 								</TooltipTrigger>
 								<TooltipContent>
 									<p className='capitalize'>{item.name}</p>

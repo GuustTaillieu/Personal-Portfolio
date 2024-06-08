@@ -1,67 +1,55 @@
 export const experience = {
-	icon: '',
 	title: 'My experience',
 	description:
-		'I have experience in web development, mobile app development, digital marketing, and SEO optimization. I am always looking for new opportunities to learn and grow as a developer.',
+		'At an age of 13 I started my programming journey with HTML, CSS, JavaScript and PHP. I studied "Multimedia Option Visual Design" at Athena Heule, gaining skills in graphic design and web design. Now, I’m pursuing "Applied Informatics, Software Engineering" at Howest Bruges, and work as a developer and designer for Zoomers and Storything during breaks.',
 	items: [
 		{
-			companyName: 'Company 1',
-			position: 'Student',
-			period: '2017 - 2021',
+			companyName: 'Sweet Mustard',
+			position: 'Trainee Backend Developer',
+			period: '2024 (3 months)',
 		},
 		{
-			companyName: 'Company 1',
-			position: 'Student',
-			period: '2017 - 2021',
+			companyName: 'TapUp',
+			position: 'App Engineer & Designer',
+			period: '2023 - Present',
 		},
 		{
-			companyName: 'Company 1',
-			position: 'Student',
-			period: '2017 - 2021',
+			companyName: 'Storything',
+			position: 'Full Stack Developer',
+			period: '2023 - Present',
 		},
 		{
-			companyName: 'Company 1',
-			position: 'Student',
-			period: '2017 - 2021',
-		},
-		{
-			companyName: 'Company 1',
-			position: 'Student',
-			period: '2017 - 2021',
+			companyName: 'Zoomers',
+			position: 'Designer',
+			period: '2021 - Present',
 		},
 	],
 } as const;
 
 export const education = {
-	icon: '',
 	title: 'My education',
 	description:
-		'I have a bachelor in computer science and am currently studying for a master in computer science.',
+		'I am currently in my last year of studying "Applied Informatics, Software Engineering" at Howest Bruges. In 2023, I studied abroad at IBA Denmark for 6 months, where I gained valuable international experience in software development and enhanced my problem-solving skills in diverse, real-world projects.',
 	items: [
 		{
-			school: 'University of Ghent',
-			position: 'Bachelor in computer science',
-			period: '2017 - 2021',
+			school: 'Howest Bruges',
+			course: 'Bachelor Applied Computer Science',
+			period: '2022 - 2024',
 		},
 		{
-			school: 'University of Ghent',
-			position: 'Bachelor in computer science',
-			period: '2017 - 2021',
+			school: 'IBA Denmark',
+			course: 'Study Abroad with Erasmus+',
+			period: '2023 (6 months)',
 		},
 		{
-			school: 'University of Ghent',
-			position: 'Bachelor in computer science',
-			period: '2017 - 2021',
+			school: 'Athena Heule',
+			course: 'Multimedia Option: Visual',
+			period: '2019 - 2021',
 		},
 		{
-			school: 'University of Ghent',
-			position: 'Bachelor in computer science',
-			period: '2017 - 2021',
-		},
-		{
-			school: 'University of Ghent',
-			position: 'Bachelor in computer science',
-			period: '2017 - 2021',
+			school: 'Don Bosco Kortrijk',
+			course: 'Science - STEM',
+			period: '2016 - 2019',
 		},
 	],
 } as const;

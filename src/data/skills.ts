@@ -7,8 +7,11 @@ import {
 	FaFigma,
 	FaNodeJs,
 	FaLaravel,
-	FaAndroid,
+	FaGit,
+	FaDocker,
+	FaPython,
 } from 'react-icons/fa';
+import { IconType } from 'react-icons/lib';
 import {
 	SiTypescript,
 	SiNextdotjs,
@@ -16,12 +19,24 @@ import {
 	SiFirebase,
 	SiAdobe,
 	SiPostgresql,
+	SiKotlin,
+	SiVisualstudiocode,
+	SiIntellijidea,
+	SiAndroidstudio,
+	SiLinux,
+	SiPowershell,
+	SiDotnet,
 } from 'react-icons/si';
+
+type Skill = {
+	name: string;
+	icon: IconType;
+};
 
 export const skills = {
 	title: 'My skills',
 	description:
-		'I have experience with a wide range of programming languages, frameworks, and tools. Here are a few of the technologies I have worked with:',
+		'I have experience with various technologies, including Java, JavaScript, Vue.js, Node.js, HTML5, CSS3, Laravel, Git, Docker, and Unix. Here are some of the technologies I have worked with:',
 	skillList: [
 		{
 			name: 'HTML',
@@ -52,12 +67,24 @@ export const skills = {
 			icon: FaNodeJs,
 		},
 		{
+			name: 'Python',
+			icon: FaPython,
+		},
+		{
 			name: 'Java',
 			icon: FaJava,
 		},
 		{
+			name: 'Kotlin',
+			icon: SiKotlin,
+		},
+		{
 			name: 'Laravel',
 			icon: FaLaravel,
+		},
+		{
+			name: 'Dotnet',
+			icon: SiDotnet,
 		},
 		{
 			name: 'MySQL',
@@ -72,10 +99,6 @@ export const skills = {
 			icon: SiFirebase,
 		},
 		{
-			name: 'Android',
-			icon: FaAndroid,
-		},
-		{
 			name: 'Figma',
 			icon: FaFigma,
 		},
@@ -83,5 +106,33 @@ export const skills = {
 			name: 'Adobe',
 			icon: SiAdobe,
 		},
-	],
+		{
+			name: 'Git',
+			icon: FaGit,
+		},
+		{
+			name: 'VS Code',
+			icon: SiVisualstudiocode,
+		},
+		{
+			name: 'IntelliJ',
+			icon: SiIntellijidea,
+		},
+		{
+			name: 'Android Studio',
+			icon: SiAndroidstudio,
+		},
+		{
+			name: 'Linux',
+			icon: SiLinux,
+		},
+		{
+			name: 'Powershell',
+			icon: SiPowershell,
+		},
+		{
+			name: 'Docker',
+			icon: FaDocker,
+		},
+	] as Skill[],
 } as const;
