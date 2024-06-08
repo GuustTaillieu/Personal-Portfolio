@@ -15,7 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { contactInfo } from '@/data/contact-info';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import services from '@/data/services';
 import { useSearchParams } from 'next/navigation';
@@ -29,9 +29,15 @@ type InputFields = {
 	service?: string;
 };
 
-type Props = {};
+const ContactPage = () => {
+	return (
+		<Suspense>
+			<Contact />;
+		</Suspense>
+	);
+};
 
-const ContactPage = (props: Props) => {
+const Contact = () => {
 	const { register, handleSubmit, reset } = useForm<InputFields>();
 	const [selectedService, setSelectedService] = useState<
 		string | undefined
