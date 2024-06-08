@@ -38,7 +38,7 @@ const EventsPage = (props: Props) => {
 					ease: 'easeIn',
 				},
 			}}
-			className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'>
+			className='min-h-[80vh] flex flex-col py-12 xl:px-0'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row xl:gap-7'>
 					<div className='w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
@@ -49,10 +49,12 @@ const EventsPage = (props: Props) => {
 							<h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
 								{event.title}
 							</h2>
-							<p className='text-white/60'>
+							<p className='text-base text-white/60'>
 								{event.shortDescription}
 							</p>
-							<p className='text-xl text-accent'>{event.date}</p>
+							<p className='text-base text-accent'>
+								{event.date} · {event.location}
+							</p>
 
 							<div className='border border-white/20' />
 							<div className='w-fit'>
