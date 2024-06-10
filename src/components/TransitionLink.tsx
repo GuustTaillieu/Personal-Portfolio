@@ -17,7 +17,7 @@ const TransitionLink = (props: Props) => {
 		animatePageOut(props.href.toString(), router);
 	};
 
-	return <Link {...props} onClick={handleClick} />;
+	return <Link {...props} onClick={props.onClick ?? handleClick} />;
 };
 
 export default TransitionLink;

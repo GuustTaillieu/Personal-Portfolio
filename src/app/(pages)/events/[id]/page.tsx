@@ -16,7 +16,7 @@ type Props = {};
 
 const EventPage = (props: Props) => {
 	const params = useParams();
-	const event = events.find((event) => event.num === params.id);
+	const event = events.find((event) => event.num === params?.id);
 	const windowSize = useRef(window.innerWidth);
 	const router = useRouter();
 

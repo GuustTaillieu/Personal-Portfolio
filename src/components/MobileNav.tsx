@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { MouseEvent, useState } from 'react';
 import { Button } from './ui/button';
 import TransitionLink from './TransitionLink';
+import { motion } from 'framer-motion';
+import { animatePageOut } from '@/lib/page-animation';
 
 type Props = {};
 
@@ -20,7 +22,8 @@ const MobileNav = (props: Props) => {
 		event.preventDefault();
 		setOpen(false);
 		setTimeout(() => {
-			router.push(href);
+			if (href === pathname) return;
+			animatePageOut(href, router);
 		}, 300);
 	}
 
@@ -42,23 +45,50 @@ const MobileNav = (props: Props) => {
 				</div>
 
 				<nav className='flex flex-col justify-center items-center gap-8'>
-					{LINKS.map((link) => (
-						<TransitionLink
-							href={link.path}
+					{LINKS.map((link, index) => (
+						<div
 							key={`mobile-link-${link.path}`}
-							onClick={(e) => delayedNavigate(e, link.path)}
-							className={`${
-								pathname === link.path &&
-								'text-accent border-b-[1px] border-accent'
-							} text-xl capitalize hover:text-accent transition-all`}>
-							{link.name}
-						</TransitionLink>
+							className='overflow-hidden'>
+							<motion.div
+								initial={{ y: '100%' }}
+								animate={{ y: 0 }}
+								transition={{
+									delay: 0.2 + 0.1 * index,
+									duration: 0.3,
+									ease: 'easeInOut',
+								}}>
+								<TransitionLink
+									href={link.path}
+									onClick={(e) =>
+										delayedNavigate(e, link.path)
+									}
+									className={`${
+										pathname === link.path &&
+										'text-accent border-b-[1px] border-accent'
+									} text-xl capitalize hover:text-accent transition-all`}>
+									{link.name}
+								</TransitionLink>
+							</motion.div>
+						</div>
 					))}
-					<TransitionLink
-						href={ROUTES.CONTACT}
-						onClick={(e) => delayedNavigate(e, ROUTES.CONTACT)}>
-						<Button>Hire me</Button>
-					</TransitionLink>
+					<div className='overflow-hidden'>
+						<motion.div
+							initial={{ y: '100%' }}
+							animate={{ y: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * LINKS.length,
+								duration: 0.3,
+								ease: 'easeInOut',
+							}}>
+							<TransitionLink
+								href={ROUTES.CONTACT}
+								onClick={(e) =>
+									delayedNavigate(e, ROUTES.CONTACT)
+								}>
+								<Button>Hire me</Button>
+							</TransitionLink>
+						</motion.div>
+					</div>
 				</nav>
 			</SheetContent>
 		</Sheet>
