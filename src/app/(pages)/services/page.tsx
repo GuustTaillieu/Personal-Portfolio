@@ -12,19 +12,7 @@ const ServicesPage = (props: Props) => {
 	return (
 		<section className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'>
 			<div className='container mx-auto'>
-				<motion.div
-					initial={{
-						opacity: 0,
-					}}
-					animate={{
-						opacity: 1,
-						transition: {
-							delay: 2.4,
-							duration: 0.4,
-							ease: 'easeIn',
-						},
-					}}
-					className='grid grid-cols-1 md:grid-cols-2 gap-14'>
+				<motion.div className='grid grid-cols-1 md:grid-cols-2 gap-14'>
 					{services.map((service) => (
 						<div
 							className='flex-1 flex flex-col justify-center gap-6 group'

@@ -44,7 +44,7 @@ const MobileNav = (props: Props) => {
 					{LINKS.map((link) => (
 						<Link
 							href={link.path}
-							key={link.path}
+							key={`mobile-link-${link.path}`}
 							onClick={(e) => delayedNavigate(e, link.path)}
 							className={`${
 								pathname === link.path &&

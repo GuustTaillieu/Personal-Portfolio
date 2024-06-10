@@ -32,6 +32,10 @@ export const events: Event[] = [
 				src: '/assets/events/01/image1.webp',
 				alt: 'OpenAI',
 			},
+			{
+				src: '/assets/events/01/image2.png',
+				alt: 'Photo of Dimitri Casier presenting',
+			},
 		],
 	},
 	{

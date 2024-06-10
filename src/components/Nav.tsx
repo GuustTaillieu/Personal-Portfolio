@@ -15,7 +15,7 @@ const Nav = (props: Props) => {
 				return (
 					<Link
 						href={link.path}
-						key={link.path}
+						key={`link-${link.path}`}
 						className={`${
 							pathname === link.path &&
 							'text-accent border-b-[1px] border-accent'

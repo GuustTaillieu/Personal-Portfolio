@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import { events } from '@/data/events';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import WorkSliderBtns from '../WorkSliderBtns';
-import { redirect, useParams, useRouter } from 'next/navigation';
+import { notFound, useParams, useRouter } from 'next/navigation';
 import { ROUTES } from '@/app/constants/routes';
 import { Button } from '@/components/ui/button';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -24,7 +24,7 @@ const EventPage = (props: Props) => {
 		return Math.max(1, Math.floor(windowSize.current / 600));
 	}, []);
 
-	if (!event) return redirect('/404');
+	if (!event) return notFound();
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
