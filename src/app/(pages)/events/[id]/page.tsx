@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import { events } from '@/data/events';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import WorkSliderBtns from '../WorkSliderBtns';
-import { redirect, useParams, useRouter } from 'next/navigation';
+import { notFound, useParams, useRouter } from 'next/navigation';
 import { ROUTES } from '@/app/constants/routes';
 import { Button } from '@/components/ui/button';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -16,7 +16,7 @@ type Props = {};
 
 const EventPage = (props: Props) => {
 	const params = useParams();
-	const event = events.find((event) => event.num === params.id);
+	const event = events.find((event) => event.num === params?.id);
 	const windowSize = useRef(window.innerWidth);
 	const router = useRouter();
 
@@ -24,14 +24,14 @@ const EventPage = (props: Props) => {
 		return Math.max(1, Math.floor(windowSize.current / 600));
 	}, []);
 
-	if (!event) return redirect('/404');
+	if (!event) return notFound();
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
 			animate={{
 				opacity: 1,
 				transition: {
-					delay: 2.4,
+					delay: 0.4,
 					duration: 0.4,
 					ease: 'easeIn',
 				},
@@ -90,7 +90,7 @@ const EventPage = (props: Props) => {
 						<Swiper spaceBetween={30} slidesPerView={slidesPerView}>
 							{event.images.map((image) => (
 								<SwiperSlide
-									key={image.src}
+									key={image.src.src}
 									className='w-full mb-14'>
 									<div className='aspect-[16/9] relative group flex justify-center items-center bg-pink-50/20'>
 										<div className='absolute inset-0 bg-black/10 z-10' />
@@ -100,8 +100,6 @@ const EventPage = (props: Props) => {
 												alt={image.alt}
 												fill
 												placeholder='blur'
-												blurDataURL={image.src}
-												priority
 												className='object-cover'
 											/>
 										</div>

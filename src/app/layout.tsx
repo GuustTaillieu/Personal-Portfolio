@@ -25,8 +25,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={jetbrainsMono.variable}>
 				<Header />
-				<StairTransition />
-				<PageTransition>{children}</PageTransition>
+				{children}
 			</body>
 		</html>
 	);

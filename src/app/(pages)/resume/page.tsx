@@ -9,6 +9,8 @@ import EducationList from './EducationList';
 import SkillsContent from './SkillsContent';
 import AboutContent from './AboutContent';
 
+const MotionTrigger = motion(TabsTrigger);
+
 type Props = {};
 
 const ResumePage = (props: Props) => {
@@ -18,7 +20,7 @@ const ResumePage = (props: Props) => {
 			animate={{
 				opacity: 1,
 				transition: {
-					delay: 2.4,
+					delay: 0.2,
 					duration: 0.4,
 					ease: 'easeIn',
 				},
@@ -29,10 +31,43 @@ const ResumePage = (props: Props) => {
 					defaultValue='about me'
 					className='flex flex-col xl:flex-row gap-[60px]'>
 					<TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
-						<TabsTrigger value='about me'>About me</TabsTrigger>
-						<TabsTrigger value='experience'>Experience</TabsTrigger>
-						<TabsTrigger value='education'>Education</TabsTrigger>
-						<TabsTrigger value='skills'>Skills</TabsTrigger>
+						<MotionTrigger
+							initial={{ x: -20 }}
+							animate={{ x: 0 }}
+							transition={{ delay: 0.2, ease: 'easeInOut' }}
+							value='about me'>
+							About me
+						</MotionTrigger>
+						<MotionTrigger
+							initial={{ x: -20 }}
+							animate={{ x: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * 2,
+								ease: 'easeInOut',
+							}}
+							value='experience'>
+							Experience
+						</MotionTrigger>
+						<MotionTrigger
+							initial={{ x: -20 }}
+							animate={{ x: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * 3,
+								ease: 'easeInOut',
+							}}
+							value='education'>
+							Education
+						</MotionTrigger>
+						<MotionTrigger
+							initial={{ x: -20 }}
+							animate={{ x: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * 4,
+								ease: 'easeInOut',
+							}}
+							value='skills'>
+							Skills
+						</MotionTrigger>
 					</TabsList>
 
 					{/* CONTENT */}

@@ -7,6 +7,9 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Link from 'next/link';
 import { MouseEvent, useState } from 'react';
 import { Button } from './ui/button';
+import TransitionLink from './TransitionLink';
+import { motion } from 'framer-motion';
+import { animatePageOut } from '@/lib/page-animation';
 
 type Props = {};
 
@@ -19,7 +22,8 @@ const MobileNav = (props: Props) => {
 		event.preventDefault();
 		setOpen(false);
 		setTimeout(() => {
-			router.push(href);
+			if (href === pathname) return;
+			animatePageOut(href, router);
 		}, 300);
 	}
 
@@ -31,33 +35,60 @@ const MobileNav = (props: Props) => {
 
 			<SheetContent side='full' className='flex flex-col'>
 				<div className='mt-32 mb-40 text-center text-2xl'>
-					<Link
+					<TransitionLink
 						href={ROUTES.HOME}
 						onClick={(e) => delayedNavigate(e, ROUTES.HOME)}>
 						<h1 className='text-4xl font-semibold'>
 							Guust<span className='text-accent'>.</span>
 						</h1>
-					</Link>
+					</TransitionLink>
 				</div>
 
 				<nav className='flex flex-col justify-center items-center gap-8'>
-					{LINKS.map((link) => (
-						<Link
-							href={link.path}
-							key={link.path}
-							onClick={(e) => delayedNavigate(e, link.path)}
-							className={`${
-								pathname === link.path &&
-								'text-accent border-b-[1px] border-accent'
-							} text-xl capitalize hover:text-accent transition-all`}>
-							{link.name}
-						</Link>
+					{LINKS.map((link, index) => (
+						<div
+							key={`mobile-link-${link.path}`}
+							className='overflow-hidden'>
+							<motion.div
+								initial={{ y: '100%' }}
+								animate={{ y: 0 }}
+								transition={{
+									delay: 0.2 + 0.1 * index,
+									duration: 0.3,
+									ease: 'easeInOut',
+								}}>
+								<TransitionLink
+									href={link.path}
+									onClick={(e) =>
+										delayedNavigate(e, link.path)
+									}
+									className={`${
+										pathname === link.path &&
+										'text-accent border-b-[1px] border-accent'
+									} text-xl capitalize hover:text-accent transition-all`}>
+									{link.name}
+								</TransitionLink>
+							</motion.div>
+						</div>
 					))}
-					<Link
-						href={ROUTES.CONTACT}
-						onClick={(e) => delayedNavigate(e, ROUTES.CONTACT)}>
-						<Button>Hire me</Button>
-					</Link>
+					<div className='overflow-hidden'>
+						<motion.div
+							initial={{ y: '100%' }}
+							animate={{ y: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * LINKS.length,
+								duration: 0.3,
+								ease: 'easeInOut',
+							}}>
+							<TransitionLink
+								href={ROUTES.CONTACT}
+								onClick={(e) =>
+									delayedNavigate(e, ROUTES.CONTACT)
+								}>
+								<Button>Hire me</Button>
+							</TransitionLink>
+						</motion.div>
+					</div>
 				</nav>
 			</SheetContent>
 		</Sheet>

@@ -14,23 +14,13 @@ const Photo = (props: Props) => {
 				animate={{
 					opacity: 1,
 					transition: {
-						delay: 2,
-						duration: 0.4,
+						delay: 0.6,
+						duration: 0.5,
 						ease: 'easeIn',
 					},
 				}}>
 				{/* IMAGE */}
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{
-						opacity: 1,
-						transition: {
-							delay: 2.4,
-							duration: 0.4,
-							ease: 'easeInOut',
-						},
-					}}
-					className='w-[298px] aspect-square xl:w-[450px] absolute'>
+				<motion.div className='w-[298px] aspect-square xl:w-[450px] absolute'>
 					<Image
 						src='/assets/profile.png'
 						priority

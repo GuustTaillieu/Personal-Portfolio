@@ -1,37 +1,35 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import Stairs from './Stairs';
-
 type Props = {};
 
 const StairTransition = (props: Props) => {
-	const pathname = usePathname();
-
 	return (
-		<>
-			<AnimatePresence mode='wait'>
-				<div key={pathname}>
-					<div className='h-screen w-screen fixed inset-0 pointer-events-none z-40 flex'>
-						<Stairs />
-					</div>
-
-					<motion.div
-						className='fixed bg-primary inset-0 pointer-events-none'
-						initial={{ opacity: 1 }}
-						animate={{
-							opacity: 0,
-							transition: {
-								duration: 0.4,
-								delay: 1,
-								ease: 'easeInOut',
-							},
-						}}
-					/>
-				</div>
-			</AnimatePresence>
-		</>
+		<div className='h-screen w-screen fixed inset-0 pointer-events-none z-40 flex'>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-0'
+				id='banner1'
+			/>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-[calc((100%_/_6))]'
+				id='banner2'
+			/>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-[calc((100%_/_6)_*_2)]'
+				id='banner3'
+			/>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-[calc((100%_/_6)_*_3)]'
+				id='banner4'
+			/>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-[calc((100%_/_6)_*_4)]'
+				id='banner5'
+			/>
+			<div
+				className='stair w-[calc((100%_/_6)_+_2px)] h-full bg-primary-light fixed left-[calc((100%_/_6)_*_5)]'
+				id='banner6'
+			/>
+		</div>
 	);
 };
 

@@ -9,11 +9,11 @@ type Social = {
 const socialIcons = [
 	{
 		icon: FaGithub,
-		path: '',
+		path: 'https://github.com/GuustTaillieu',
 	},
 	{
 		icon: FaLinkedinIn,
-		path: '',
+		path: 'https://www.linkedin.com/in/guust-taillieu/',
 	},
 ] as Social[];
 
