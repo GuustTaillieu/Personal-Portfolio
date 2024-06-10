@@ -1,6 +1,4 @@
-import TransitionLink from '@/components/TransitionLink';
 import { socialIcons } from '@/data/socials';
-import Link from 'next/link';
 
 type Props = {
 	containerStyles?: string;
@@ -12,12 +10,13 @@ const Socials = ({ containerStyles, linkStyles, iconStyles }: Props) => {
 	return (
 		<div className={containerStyles}>
 			{socialIcons.map((social) => (
-				<TransitionLink
+				<a
 					key={social.path}
 					href={social.path}
+					target='_blank'
 					className={linkStyles}>
 					<social.icon className={iconStyles} />
-				</TransitionLink>
+				</a>
 			))}
 		</div>
 	);

@@ -1,10 +1,5 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import Stairs from './Stairs';
-import { STAIR_AMOUNT } from '@/app/constants/stairs';
-
 type Props = {};
 
 const StairTransition = (props: Props) => {

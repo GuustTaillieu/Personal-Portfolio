@@ -31,25 +31,24 @@ export default function Home() {
 							in cutting-edge technologies.
 						</p>
 
-						<a
-							href='/2024_Guust-CV.pdf'
-							download
-							className='flex flex-col 2xl:flex-row items-center gap-8'>
-							<Button
-								variant='outline'
-								size='md'
-								className='uppercase flex items-center gap-2'>
-								<span className=''>Download CV</span>
-								<FiDownload className='text-2xl' />
-							</Button>
-							<div className='mb-8 2xl:mb-0'>
+						<div className='flex flex-col 2xl:flex-row items-center gap-8'>
+							<a href='/2024_Guust-CV.pdf' download>
+								<Button
+									variant='outline'
+									size='md'
+									className='uppercase flex items-center gap-2'>
+									<span className=''>Download CV</span>
+									<FiDownload className='text-xl' />
+								</Button>
+							</a>
+							<span className='mb-8 2xl:mb-0'>
 								<Socials
 									containerStyles='flex gap-6'
 									linkStyles='size-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500'
 									iconStyles='text-xl'
 								/>
-							</div>
-						</a>
+							</span>
+						</div>
 					</motion.div>
 					<div className='order-1 2xl:order-none mb-8 2xl:mb-0'>
 						<Photo />
