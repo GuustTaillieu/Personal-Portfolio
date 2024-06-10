@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import Link from 'next/link';
 import { MouseEvent, useState } from 'react';
 import { Button } from './ui/button';
+import TransitionLink from './TransitionLink';
 
 type Props = {};
 
@@ -31,18 +32,18 @@ const MobileNav = (props: Props) => {
 
 			<SheetContent side='full' className='flex flex-col'>
 				<div className='mt-32 mb-40 text-center text-2xl'>
-					<Link
+					<TransitionLink
 						href={ROUTES.HOME}
 						onClick={(e) => delayedNavigate(e, ROUTES.HOME)}>
 						<h1 className='text-4xl font-semibold'>
 							Guust<span className='text-accent'>.</span>
 						</h1>
-					</Link>
+					</TransitionLink>
 				</div>
 
 				<nav className='flex flex-col justify-center items-center gap-8'>
 					{LINKS.map((link) => (
-						<Link
+						<TransitionLink
 							href={link.path}
 							key={`mobile-link-${link.path}`}
 							onClick={(e) => delayedNavigate(e, link.path)}
@@ -51,13 +52,13 @@ const MobileNav = (props: Props) => {
 								'text-accent border-b-[1px] border-accent'
 							} text-xl capitalize hover:text-accent transition-all`}>
 							{link.name}
-						</Link>
+						</TransitionLink>
 					))}
-					<Link
+					<TransitionLink
 						href={ROUTES.CONTACT}
 						onClick={(e) => delayedNavigate(e, ROUTES.CONTACT)}>
 						<Button>Hire me</Button>
-					</Link>
+					</TransitionLink>
 				</nav>
 			</SheetContent>
 		</Sheet>

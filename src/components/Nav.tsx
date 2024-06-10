@@ -1,8 +1,8 @@
 'use client';
 
 import { LINKS } from '@/app/constants/routes';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import TransitionLink from './TransitionLink';
 
 type Props = {};
 
@@ -13,7 +13,7 @@ const Nav = (props: Props) => {
 		<nav className='flex gap-8'>
 			{LINKS.map((link) => {
 				return (
-					<Link
+					<TransitionLink
 						href={link.path}
 						key={`link-${link.path}`}
 						className={`${
@@ -21,7 +21,7 @@ const Nav = (props: Props) => {
 							'text-accent border-b-[1px] border-accent'
 						} capitalize font-medium hover:text-accent transition-all`}>
 						{link.name}
-					</Link>
+					</TransitionLink>
 				);
 			})}
 		</nav>

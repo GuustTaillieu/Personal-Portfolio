@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 import Image from 'next/image';
 import WorkSliderBtns from './WorkSliderBtns';
+import TransitionLink from '@/components/TransitionLink';
 
 type Props = {};
 
@@ -58,7 +59,7 @@ const EventsPage = (props: Props) => {
 
 							<div className='border border-white/20' />
 							<div className='w-fit'>
-								<Link href={`/events/${event.num}`}>
+								<TransitionLink href={`/events/${event.num}`}>
 									<TooltipProvider delayDuration={100}>
 										<Tooltip>
 											<TooltipTrigger className='size-14 rounded-full bg-white/5 flex justify-center items-center group'>
@@ -69,7 +70,7 @@ const EventsPage = (props: Props) => {
 											</TooltipContent>
 										</Tooltip>
 									</TooltipProvider>
-								</Link>
+								</TransitionLink>
 							</div>
 						</div>
 					</div>

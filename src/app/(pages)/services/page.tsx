@@ -1,6 +1,7 @@
 'use client';
 
 import { ROUTES } from '@/app/constants/routes';
+import TransitionLink from '@/components/TransitionLink';
 import services from '@/data/services';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -22,13 +23,13 @@ const ServicesPage = (props: Props) => {
 								<div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
 									{service.num}
 								</div>
-								<Link
+								<TransitionLink
 									href={ROUTES.CONTACT_WITH_SERVICE(
 										service.num
 									)}
 									className='flex justify-center items-center hover:-rotate-[45deg] border-white border size-14 rounded-full group-hover:border-accent  transition-all duration-500'>
 									<BsArrowDownRight className='text-white text-2xl group-hover:text-accent transition-all duration-500' />
-								</Link>
+								</TransitionLink>
 							</div>
 
 							{/* HEADING */}
