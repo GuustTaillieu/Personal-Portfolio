@@ -92,7 +92,6 @@ const EventsPage = (props: Props) => {
 												src={event.thumbnail}
 												alt={event.title}
 												fill
-												priority
 												className='object-cover'
 											/>
 										</div>

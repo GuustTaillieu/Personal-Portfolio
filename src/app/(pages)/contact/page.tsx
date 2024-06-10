@@ -43,7 +43,7 @@ const Contact = () => {
 		string | undefined
 	>();
 	const params = useSearchParams();
-	const serviceNum = params.get('service');
+	const serviceNum = params?.get('service');
 	const serviceSelector = useRef<HTMLButtonElement>(null);
 
 	useEffect(() => {
@@ -83,7 +83,7 @@ const Contact = () => {
 			animate={{
 				opacity: 1,
 				transition: {
-					delay: 2.4,
+					delay: 0.4,
 					duration: 0.4,
 					ease: 'easeIn',
 				},
@@ -91,7 +91,18 @@ const Contact = () => {
 			className='py-6 min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col xl:flex-row gap-7'>
-					<div className='xl:w-[54%] order-1 xl:order-none'>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{
+							opacity: 1,
+							y: 0,
+							transition: {
+								delay: 0.4,
+								duration: 0.5,
+								ease: 'easeInOut',
+							},
+						}}
+						className='xl:w-[54%] order-1 xl:order-none'>
 						<form
 							onSubmit={handleSubmit(onSubmit)}
 							className='flex flex-col gap-6 p-10 bg-primary-light rounded-xl'>
@@ -168,15 +179,25 @@ const Contact = () => {
 								Send Message
 							</Button>
 						</form>
-					</div>
+					</motion.div>
 
 					{/* info */}
 					<div className='flex-1 flex items-center xl:justify-end order-2 xl:order-none mb-8 xl:mb-0'>
 						<ul className='flex flex-col gap-10'>
 							{contactInfo.map((info, index) => (
-								<li
-									className='flex items-center gap-6'
-									key={info.title}>
+								<motion.li
+									key={info.title}
+									initial={{ opacity: 0, y: 20 }}
+									animate={{
+										opacity: 1,
+										y: 0,
+										transition: {
+											delay: 0.4 + index * 0.1,
+											duration: 0.5,
+											ease: 'easeInOut',
+										},
+									}}
+									className='flex items-center gap-6'>
 									<div className='size-[52px] xl:size-[72px] bg-primary-light text-accent rounded-md flex items-center justify-center'>
 										<info.icon className='text-[28px]' />
 									</div>
@@ -188,7 +209,7 @@ const Contact = () => {
 											{info.value}
 										</h3>
 									</div>
-								</li>
+								</motion.li>
 							))}
 						</ul>
 					</div>
