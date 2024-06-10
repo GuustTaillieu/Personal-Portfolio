@@ -31,7 +31,7 @@ const EventPage = (props: Props) => {
 			animate={{
 				opacity: 1,
 				transition: {
-					delay: 2.4,
+					delay: 0.4,
 					duration: 0.4,
 					ease: 'easeIn',
 				},
@@ -90,7 +90,7 @@ const EventPage = (props: Props) => {
 						<Swiper spaceBetween={30} slidesPerView={slidesPerView}>
 							{event.images.map((image) => (
 								<SwiperSlide
-									key={image.src}
+									key={image.src.src}
 									className='w-full mb-14'>
 									<div className='aspect-[16/9] relative group flex justify-center items-center bg-pink-50/20'>
 										<div className='absolute inset-0 bg-black/10 z-10' />
@@ -100,8 +100,6 @@ const EventPage = (props: Props) => {
 												alt={image.alt}
 												fill
 												placeholder='blur'
-												blurDataURL={image.src}
-												priority
 												className='object-cover'
 											/>
 										</div>

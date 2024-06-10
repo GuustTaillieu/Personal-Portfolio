@@ -92,6 +92,7 @@ const EventsPage = (props: Props) => {
 												src={event.thumbnail}
 												alt={event.title}
 												fill
+												placeholder='blur'
 												className='object-cover'
 											/>
 										</div>
