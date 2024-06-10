@@ -31,7 +31,10 @@ export default function Home() {
 							in cutting-edge technologies.
 						</p>
 
-						<div className='flex flex-col 2xl:flex-row items-center gap-8'>
+						<a
+							href='/2024_Guust-CV.pdf'
+							download
+							className='flex flex-col 2xl:flex-row items-center gap-8'>
 							<Button
 								variant='outline'
 								size='md'
@@ -46,7 +49,7 @@ export default function Home() {
 									iconStyles='text-xl'
 								/>
 							</div>
-						</div>
+						</a>
 					</motion.div>
 					<div className='order-1 2xl:order-none mb-8 2xl:mb-0'>
 						<Photo />

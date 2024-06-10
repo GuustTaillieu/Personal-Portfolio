@@ -1,6 +1,6 @@
 'use client';
 
-import { LINKS } from '@/app/constants/routes';
+import { LINKS, ROUTES } from '@/app/constants/routes';
 import { usePathname } from 'next/navigation';
 import TransitionLink from './TransitionLink';
 import { motion } from 'framer-motion';
