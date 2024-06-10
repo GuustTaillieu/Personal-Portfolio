@@ -9,7 +9,7 @@ type Props = {
 	children: React.ReactNode;
 };
 
-export default function template({ children }: Props) {
+export default function Template({ children }: Props) {
 	const pathname = usePathname();
 	useEffect(() => {
 		animatePageIn();
