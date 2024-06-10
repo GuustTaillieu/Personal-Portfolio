@@ -8,6 +8,7 @@ import ExperienceList from './ExperienceList';
 import EducationList from './EducationList';
 import SkillsContent from './SkillsContent';
 import AboutContent from './AboutContent';
+import WebsiteContent from './WebsiteContent';
 
 const MotionTrigger = motion(TabsTrigger);
 
@@ -68,6 +69,16 @@ const ResumePage = (props: Props) => {
 							value='skills'>
 							Skills
 						</MotionTrigger>
+						<MotionTrigger
+							initial={{ x: -20 }}
+							animate={{ x: 0 }}
+							transition={{
+								delay: 0.2 + 0.1 * 4,
+								ease: 'easeInOut',
+							}}
+							value='website'>
+							This website
+						</MotionTrigger>
 					</TabsList>
 
 					{/* CONTENT */}
@@ -112,6 +123,11 @@ const ResumePage = (props: Props) => {
 							value='skills'
 							className='w-full h-full mb-6'>
 							<SkillsContent />
+						</TabsContent>
+						<TabsContent
+							value='website'
+							className='w-full h-full mb-6'>
+							<WebsiteContent />
 						</TabsContent>
 					</div>
 				</Tabs>
