@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Photo from './Photo';
 import Socials from './Socials';
 import Stats from './Stats';
@@ -9,7 +12,15 @@ export default function Home() {
 		<section className='h-full min-h-[60vh] flex items-center'>
 			<div className='container mx-auto'>
 				<div className='flex flex-col 2xl:flex-row items-center justify-between 2xl:pt-8 2xl:pb-24'>
-					<div className='text-center 2xl:text-left order-2 2xl:order-none'>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{
+							delay: 1.6,
+							duration: 0.5,
+							ease: 'easeInOut',
+						}}
+						className='text-center 2xl:text-left order-2 2xl:order-none'>
 						<span className='text-2xl'>Software Developer</span>
 						<h1 className='h1 mb-6'>
 							Hello, I&apos;m <br />{' '}
@@ -36,7 +47,7 @@ export default function Home() {
 								/>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 					<div className='order-1 2xl:order-none mb-8 2xl:mb-0'>
 						<Photo />
 					</div>
