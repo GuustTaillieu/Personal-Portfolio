@@ -32,7 +32,7 @@ export default function Home() {
 						</p>
 
 						<div className='flex flex-col 2xl:flex-row items-center gap-8'>
-							<a href='/2024_Guust-CV.pdf' download>
+							<a href='/CV_2025.pdf' download>
 								<Button
 									variant='outline'
 									size='md'
