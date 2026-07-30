@@ -38,7 +38,7 @@ const Photo = (props: Props) => {
           />
         </motion.div>
 
-        {/* CIRCLE */}
+        {/* GREEN CIRCLE */}
         <motion.svg
           className='w-[300px] aspect-square xl:w-[458px]'
           fill='transparent'
