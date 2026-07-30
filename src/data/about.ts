@@ -29,7 +29,7 @@ export const about = {
 		},
 		{
 			fieldName: 'Status',
-			fieldValue: 'Last year student',
+			fieldValue: 'Looking for a new challenge',
 		},
 		{
 			fieldName: 'Languages',

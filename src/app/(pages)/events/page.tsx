@@ -81,16 +81,17 @@ const EventsPage = (props: Props) => {
 							slidesPerView={1}
 							className='mb-12'
 							onSlideChange={handleSlideChange}>
-							{events.map((event) => (
+							{events.map((ev) => (
 								<SwiperSlide
-									key={event.num}
+									key={ev.num}
 									className='w-full mb-14'>
 									<div className='aspect-[16/9] relative group flex justify-center items-center bg-pink-50/20'>
 										<div className='absolute inset-0 bg-black/10 z-10' />
 										<div className='relative w-full h-full'>
 											<Image
-												src={event.thumbnail}
-												alt={event.title}
+												src={ev.thumbnail}
+												alt={ev.title}
+												loading={ev.num == event.num ? 'eager' : 'lazy'}
 												fill
 												placeholder='blur'
 												className='object-cover'

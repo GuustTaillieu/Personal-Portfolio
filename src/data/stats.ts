@@ -6,15 +6,15 @@ type Stat = {
 const stats = [
 	{
 		text: 'Year of experience',
-		number: 4,
+		number: 5,
 	},
 	{
 		text: 'Projects completed',
-		number: 11,
+		number: 6,
 	},
 	{
 		text: 'Happy clients',
-		number: 15,
+		number: 6,
 	},
 	{
 		text: 'Companies worked',

@@ -3,14 +3,14 @@ import { IconType } from 'react-icons/lib';
 import {
 	SiTypescript,
 	SiNextdotjs,
-	SiVisualstudiocode,
 	SiTailwindcss,
 	SiFramer,
 	SiVercel,
 	SiShadcnui,
-	SiAdobephotoshop,
 	SiGreensock,
 } from 'react-icons/si';
+import { DiPhotoshop } from 'react-icons/di';
+import { VscVscode } from 'react-icons/vsc';
 
 type Skill = {
 	name: string;
@@ -40,7 +40,7 @@ export const website = {
 		},
 		{
 			name: 'Photoshop',
-			icon: SiAdobephotoshop,
+			icon: DiPhotoshop,
 		},
 		{
 			name: 'Git',
@@ -48,7 +48,7 @@ export const website = {
 		},
 		{
 			name: 'VS Code',
-			icon: SiVisualstudiocode,
+			icon: VscVscode,
 		},
 		{
 			name: 'TailwindCSS',

@@ -36,6 +36,7 @@ const WorkSliderBtns = ({
 				style={{
 					opacity: isBeginning ? 0.5 : 1,
 				}}
+				disabled={isBeginning}
 				className={cn('', btnStyles)}
 				onClick={() => !swiper.isBeginning && swiper.slidePrev()}>
 				<PiCaretLeftBold className={cn('', iconStyles)} />
@@ -44,6 +45,7 @@ const WorkSliderBtns = ({
 				style={{
 					opacity: isEnd ? 0.5 : 1,
 				}}
+				disabled={isEnd}
 				className={cn('', btnStyles)}
 				onClick={() => !swiper.isEnd && swiper.slideNext()}>
 				<PiCaretRightBold className={cn('', iconStyles)} />

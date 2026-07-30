@@ -4,6 +4,11 @@ export const experience = {
 		'At an age of 13 I started my programming journey with HTML, CSS, JavaScript and PHP. I studied "Multimedia Option Visual Design" at Athena Heule, gaining skills in graphic design and web design. Now, I’m pursuing "Applied Informatics, Software Engineering" at Howest Bruges, and work as a developer and designer for Zoomers and Storything during breaks.',
 	items: [
 		{
+			companyName: 'BrightAnalytics',
+			position: 'Trainee Full Stack Developer',
+			period: '2025 (3 months)',
+		},
+		{
 			companyName: 'Sweet Mustard',
 			position: 'Trainee Backend Developer',
 			period: '2024 (3 months)',
@@ -11,17 +16,17 @@ export const experience = {
 		{
 			companyName: 'TapUp',
 			position: 'App Engineer & Designer',
-			period: '2023 - Present',
+			period: '2023 - 2024',
 		},
 		{
 			companyName: 'Storything',
 			position: 'Full Stack Developer',
-			period: '2023 - Present',
+			period: '2024 - 2025',
 		},
 		{
 			companyName: 'Zoomers',
 			position: 'Designer',
-			period: '2021 - Present',
+			period: '2021 - 2024',
 		},
 	],
 } as const;
@@ -33,7 +38,11 @@ export const education = {
 	items: [
 		{
 			school: 'Howest Bruges',
-			course: 'Bachelor Applied Computer Science',
+			course: 'Bachelor Cybersecurity',
+			period: '2025 - 2026',
+		}, {
+			school: 'Howest Bruges',
+			course: 'Bachelor Software Engineer',
 			period: '2022 - 2024',
 		},
 		{
@@ -45,11 +54,6 @@ export const education = {
 			school: 'Athena Heule',
 			course: 'Multimedia Option: Visual',
 			period: '2019 - 2021',
-		},
-		{
-			school: 'Don Bosco Kortrijk',
-			course: 'Science - STEM',
-			period: '2016 - 2019',
 		},
 	],
 } as const;

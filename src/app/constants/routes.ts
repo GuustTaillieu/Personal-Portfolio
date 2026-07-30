@@ -15,14 +15,6 @@ export const LINKS = [
 		name: 'events',
 		path: '/events',
 	},
-	// {
-	// 	name: 'work',
-	// 	path: '/work',
-	// },
-	{
-		name: 'contact',
-		path: '/contact',
-	},
 ] as const;
 
 export const ROUTES = {

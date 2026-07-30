@@ -19,8 +19,6 @@ import event_06_cover1 from '@assets/events/06/cover.webp';
 import event_06_image1 from '@assets/events/06/image1.png';
 import event_06_image2 from '@assets/events/06/image2.jpg';
 import event_06_image3 from '@assets/events/06/image3.jpg';
-import event_06_image4 from '@assets/events/06/image4.jpg';
-import event_06_image5 from '@assets/events/06/image5.jpg';
 import event_07_cover1 from '@assets/events/07/cover.jpg';
 import event_07_image1 from '@assets/events/07/image1.jpg';
 import event_07_image2 from '@assets/events/07/image2.jpg';

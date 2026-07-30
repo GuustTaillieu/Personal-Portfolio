@@ -5,7 +5,6 @@ import {
 	FaJava,
 	FaReact,
 	FaFigma,
-	FaNodeJs,
 	FaLaravel,
 	FaGit,
 	FaDocker,
@@ -13,20 +12,22 @@ import {
 } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import {
+	SiTanstack,
 	SiTypescript,
 	SiNextdotjs,
 	SiMongodb,
 	SiFirebase,
-	SiAdobe,
 	SiPostgresql,
 	SiKotlin,
-	SiVisualstudiocode,
 	SiIntellijidea,
 	SiAndroidstudio,
 	SiLinux,
-	SiPowershell,
 	SiDotnet,
+	SiGithubcopilot,
+	SiExpo,
 } from 'react-icons/si';
+import { VscTerminalPowershell, VscVscode, VscCopilot } from 'react-icons/vsc'
+import { BiLogoAdobe, BiLogoGoLang } from "react-icons/bi";
 
 type Skill = {
 	name: string;
@@ -63,8 +64,12 @@ export const skills = {
 			icon: SiNextdotjs,
 		},
 		{
-			name: 'Node.js',
-			icon: FaNodeJs,
+			name: 'Tanstack Start',
+			icon: SiTanstack,
+		},
+		{
+			name: 'Expo',
+			icon: SiExpo,
 		},
 		{
 			name: 'Python',
@@ -87,6 +92,10 @@ export const skills = {
 			icon: SiDotnet,
 		},
 		{
+			name: 'Golang',
+			icon: BiLogoGoLang,
+		},
+		{
 			name: 'MySQL',
 			icon: SiPostgresql,
 		},
@@ -99,28 +108,20 @@ export const skills = {
 			icon: SiFirebase,
 		},
 		{
+			name: 'Github Copilot (AI Driven Development)',
+			icon: SiGithubcopilot,
+		},
+		{
 			name: 'Figma',
 			icon: FaFigma,
 		},
 		{
 			name: 'Adobe',
-			icon: SiAdobe,
+			icon: BiLogoAdobe,
 		},
 		{
 			name: 'Git',
 			icon: FaGit,
-		},
-		{
-			name: 'VS Code',
-			icon: SiVisualstudiocode,
-		},
-		{
-			name: 'IntelliJ',
-			icon: SiIntellijidea,
-		},
-		{
-			name: 'Android Studio',
-			icon: SiAndroidstudio,
 		},
 		{
 			name: 'Linux',
@@ -128,7 +129,7 @@ export const skills = {
 		},
 		{
 			name: 'Powershell',
-			icon: SiPowershell,
+			icon: VscTerminalPowershell,
 		},
 		{
 			name: 'Docker',
