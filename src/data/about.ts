@@ -7,8 +7,8 @@ type AboutInfo = {
 export const about = {
 	title: 'About me',
 	description:
-		'Hi there! I am Guust Taillieu, a 20-year-old full-stack developer studying Applied Informatics at Howest Bruges. I love creating user-friendly and functional software, with a focus on both front-end and back-end development. Outside of studying, I work on personal projects, hit the gym, take walks, and contribute to Zoomers and Storything.',
-	info: [
+		'Hey there! I’m Guust Taillieu, a 23-year-old full-stack developer on a mission to conquer the digital world-while making sure I actually touch some grass now and then. I thrive on crafting user-friendly and functional software, juggling front-end and back-end development like a pro! When I’m not buried in code, you can find me bouldering my way to new heights, exploring nature, or building personal projects.', 
+  info: [
 		{
 			fieldName: 'Name',
 			fieldValue: 'Guust Taillieu',

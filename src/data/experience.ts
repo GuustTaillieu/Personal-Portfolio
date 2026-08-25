@@ -1,8 +1,13 @@
 export const experience = {
 	title: 'My experience',
 	description:
-		'At an age of 13 I started my programming journey with HTML, CSS, JavaScript and PHP. I studied "Multimedia Option Visual Design" at Athena Heule, gaining skills in graphic design and web design. Now, I’m pursuing "Applied Informatics, Software Engineering" at Howest Bruges, and work as a developer and designer for Zoomers and Storything during breaks.',
+		'I started my coding journey at age 13 with HTML, CSS, JavaScript, and PHP. Over the years, I combined a strong foundation in visual design with advanced software engineering and cybersecurity studies. I’ve built mobile and web products for agencies, student clients, and personal projects, while also spending 4 years mentoring and tutoring students in programming online.',
 	items: [
+    {
+      companyName: undefined,
+      position: 'Online Tech Tutor & Mentor',
+      period: '2022 – Present',
+    },
 		{
 			companyName: 'BrightAnalytics',
 			position: 'Trainee Full Stack Developer',
@@ -34,7 +39,7 @@ export const experience = {
 export const education = {
 	title: 'My education',
 	description:
-		'I am currently in my last year of studying "Applied Informatics, Software Engineering" at Howest Bruges. In 2023, I studied abroad at IBA Denmark for 6 months, where I gained valuable international experience in software development and enhanced my problem-solving skills in diverse, real-world projects.',
+		'I hold a background of 4.5 years in IT higher education, specializing in Software Engineering and Cybersecurity at Howest Bruges. In 2023, I spent 6 months studying abroad at IBA Denmark via Erasmus+, gaining international experience in software development and cross-cultural teamwork. My studies combine deep application architecture with hands-on system security and visual design.',
 	items: [
 		{
 			school: 'Howest Bruges',

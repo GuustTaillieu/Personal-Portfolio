@@ -19,14 +19,12 @@ import {
 	SiFirebase,
 	SiPostgresql,
 	SiKotlin,
-	SiIntellijidea,
-	SiAndroidstudio,
 	SiLinux,
 	SiDotnet,
 	SiGithubcopilot,
 	SiExpo,
 } from 'react-icons/si';
-import { VscTerminalPowershell, VscVscode, VscCopilot } from 'react-icons/vsc'
+import { VscTerminalPowershell } from 'react-icons/vsc'
 import { BiLogoAdobe, BiLogoGoLang } from "react-icons/bi";
 
 type Skill = {
@@ -37,7 +35,7 @@ type Skill = {
 export const skills = {
 	title: 'My skills',
 	description:
-		'I have experience with various technologies, including Java, JavaScript, Vue.js, Node.js, HTML5, CSS3, Laravel, Git, Docker, and Unix. Here are some of the technologies I have worked with:',
+		'I specialize in modern full-stack web and cross-platform mobile development, combining frontend frameworks like React Native (Expo), Next.js, and TanStack Start with robust backends in Go (Golang), PostgreSQL, and Node/NestJS. I leverage AI-assisted development tools to ship features rapidly, backed by a strong focus on cybersecurity principles and clean code architecture.',
 	skillList: [
 		{
 			name: 'HTML',
