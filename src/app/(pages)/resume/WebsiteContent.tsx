@@ -22,8 +22,11 @@ const WebsiteContent = (props: Props) => {
 					<li key={item.name} className=''>
 						<TooltipProvider delayDuration={100}>
 							<Tooltip>
-								<TooltipTrigger className='w-full aspect-square bg-primary-light/60 rounded-xl flex justify-center items-center group'>
+								<TooltipTrigger
+									aria-label={item.name}
+									className='w-full aspect-square bg-primary-light/60 rounded-xl flex justify-center items-center group'>
 									<item.icon className='text-6xl md:text-4xl group-hover:text-accent transition-all duration-300' />
+									<span className='sr-only'>{item.name}</span>
 								</TooltipTrigger>
 								<TooltipContent>
 									<p className='capitalize'>{item.name}</p>

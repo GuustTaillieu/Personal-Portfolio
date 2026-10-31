@@ -1,0 +1,54 @@
+# Guust Taillieu - Personal Portfolio & Knowledge Base
+
+> This document contains comprehensive information about Guust Taillieu for AI assistants, LLM crawlers, and voice agents (such as ElevenLabs Conversational AI).
+
+## Personal Information
+- **Name**: Guust Taillieu
+- **Role**: Software Developer / Full-Stack Developer
+- **Nationality**: Belgian
+- **Languages**: Dutch, English
+- **Email**: guust@taillieusauw.net
+- **Phone**: +32 496 07 70 61
+- **Status**: Looking for a new challenge
+- **Website**: https://taillieusauw.net
+- **GitHub**: https://github.com/GuustTaillieu
+- **LinkedIn**: https://www.linkedin.com/in/guust-taillieu/
+
+## About Guust
+Guust Taillieu is a 23-year-old full-stack developer who crafts user-friendly and functional software, balancing front-end and back-end engineering. When not coding, Guust enjoys bouldering, exploring nature, and building personal projects.
+
+## Services
+1. **Web Development**: Creating modern, performant, and responsive web applications using cutting-edge technologies like Next.js, React, and TypeScript.
+2. **UI/UX Design**: Designing clean, intuitive, and modern interfaces in Figma and prototyping interactive user journeys.
+3. **Mentoring & Tutoring**: Over 4 years of experience tutoring and mentoring students in programming, cybersecurity, and computer science concepts.
+4. **Cyber Security**: Practical security expertise specializing in application security, penetration testing fundamentals, and defensive engineering.
+
+## Experience
+- **Online Tech Tutor & Mentor** (2022 – Present): Mentoring students online in software development, algorithms, web technologies, and security practices.
+- **BrightAnalytics** (2025, 3 months): Trainee Full Stack Developer.
+- **Sweet Mustard** (2024, 3 months): Trainee Backend Developer.
+- **TapUp** (2023 – 2024): App Engineer & Designer.
+- **Storything** (2024 – 2025): Full Stack Developer.
+- **Zoomers** (2021 – 2024): Designer.
+
+## Education
+- **Howest Bruges** (2025 – 2026): Bachelor Cybersecurity. Specializing in systems security, network defenses, cryptography, and defensive engineering.
+- **Howest Bruges**: Bachelor Software Engineering. Strong foundation in application architecture, full-stack systems, databases, and software design patterns.
+- **IBA Denmark** (2023, 6 months): Erasmus+ study abroad program gaining international software engineering and cross-cultural teamwork experience.
+
+## Key Skills & Technologies
+- **Core Languages**: TypeScript, JavaScript, HTML5, CSS3, PHP, Python, SQL, C#
+- **Frameworks & Libraries**: Next.js, React, Node.js, Tailwind CSS, Framer Motion, GSAP, Radix UI / Shadcn UI
+- **Design & Tools**: Figma, Photoshop, VS Code, Git, GitHub, Vercel
+
+## Key Pages & Direct URLs
+- Home: https://taillieusauw.net/
+- Services: https://taillieusauw.net/services
+- Resume (Overview & About): https://taillieusauw.net/resume?tab=about-me
+- Resume (Experience): https://taillieusauw.net/resume?tab=experience
+- Resume (Education): https://taillieusauw.net/resume?tab=education
+- Resume (Skills): https://taillieusauw.net/resume?tab=skills
+- Resume (Website Architecture): https://taillieusauw.net/resume?tab=website
+- Events & Projects: https://taillieusauw.net/events
+- Contact: https://taillieusauw.net/contact
+
