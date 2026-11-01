@@ -100,9 +100,9 @@ export const projects: Project[] = [
 		successDescription:
 			'The project was managed in a strict Scrum and Agile environment with daily stand-ups, retrospectives, and two-week sprints. The internship provided deep insights into effective teamwork among software developers, maximizing team efficiency, implementing Hexagonal Architecture with Spring Boot, and shipping production-ready enterprise code with coaching from Cronos Group mentors.',
 		metrics: [
-			{ label: 'Team Size', value: '5 student engineers' },
-			{ label: 'Architecture', value: 'Hexagonal (Ports & Adapters)' },
-			{ label: 'My Focus', value: '99% Backend' },
+			{ label: 'Team Size', value: '5 Trainees' },
+			{ label: 'Architecture', value: 'Hexagonal' },
+			{ label: 'My Role', value: 'Backend Developer' },
 			{ label: 'Cloud Infrastructure', value: 'Microsoft Azure' },
 		],
 		isInternal: true,
@@ -202,10 +202,10 @@ export const projects: Project[] = [
 		successDescription:
 			'The founders were immensely proud of the launch, and the website was honored with a Website of the Month Award by DesignRush (designrush.com). Building a seamless, high-performance 3D-rotation scrollytelling experience in pure vanilla JavaScript without external animation libraries was a massive technical milestone that ignited my passion for creative development.',
 		metrics: [
-			{ label: 'Industry Award', value: 'DesignRush Winner' },
-			{ label: 'Core Technology', value: 'Pure Vanilla JS' },
-			{ label: '3D Interaction', value: '360° Image Sequence' },
-			{ label: 'Languages', value: 'NL · FR · EN' },
+			{ label: 'DesignRush Winner', value: 'Website Of The Month' },
+			{ label: 'Core Technology', value: 'Vanilla JS' },
+			{ label: '3D Interaction', value: 'Image Sequence' },
+			{ label: 'Accessibility', value: 'Language Switcher' },
 		],
 		isInternal: false,
 		confidentialityNote:
@@ -217,16 +217,18 @@ export const projects: Project[] = [
 			{ name: '3D Image Sequence' },
 			{ name: 'Scrollytelling' },
 			{ name: 'Figma (UI/UX)', icon: FaFigma },
-			{ name: 'Multilingual i18n' },
+			{ name: 'Custom Language Switcher' },
+			{ name: 'Custom Animation Scripts' },
 		],
 		images: [
 			{
-				src: '/assets/projects/sundo/website.GIF',
-				title: 'Sundo Scrollytelling Website',
-				displayUrl: 'https://www.sundodispensers.com',
+				src: '/assets/projects/sundo/sundo.mp4',
+				title: 'Sundo Scrollytelling Web Experience',
+				url: 'https://www.sundodispensers.com',
+				displayUrl: 'sundodispensers.com',
 				online: true,
 			},
-		]
+		],
 	},
 	{
 		id: 'zoomers',
@@ -250,9 +252,9 @@ export const projects: Project[] = [
 			'Working as a visual designer alongside my software engineering studies gave me a distinctive dual perspective: I don’t just write code, I understand visual hierarchy, user psychology, and accessible interaction design. Over 4 years of hands-on Figma and UI/UX work across multiple client platforms has made design an intuitive second nature in everything I build.',
 		metrics: [
 			{ label: 'Experience', value: '4+ Years UI/UX' },
-			{ label: 'Agency Tenure', value: '3+ Years with Zoomers' },
+			{ label: 'Projects', value: '25+ Projects' },
 			{ label: 'Primary Tool', value: 'Figma' },
-			{ label: 'Core Output', value: 'Design Systems & UI' },
+			{ label: 'Core Output', value: 'Web & Mobile Design' },
 		],
 		isInternal: false,
 		confidentialityNote:

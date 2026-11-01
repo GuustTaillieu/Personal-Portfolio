@@ -25,6 +25,11 @@ type Props = {
 	project: Project;
 };
 
+function isVideoFile(src?: string): boolean {
+	if (!src) return false;
+	return /\.(mp4|webm|ogg|mov)$/i.test(src);
+}
+
 function normalizePreview(item: string | ProjectPreview): ProjectPreview {
 	return typeof item === 'string' ? { src: item } : item;
 }
@@ -111,18 +116,29 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 								{previews.map((preview, idx) => (
 									<SwiperSlide
 										key={preview.src}
-										className='relative w-full h-full bg-black'>
-										<Image
-											src={preview.src}
-											alt={
-												preview.title ||
-												`${project.title} screen ${idx + 1}`
-											}
-											fill
-											sizes='(max-width: 640px) 280px, 320px'
-											className='object-cover object-top'
-											priority={idx === 0}
-										/>
+										className='relative w-full h-full bg-black flex items-center justify-center'>
+										{isVideoFile(preview.src) ? (
+											<video
+												src={preview.src}
+												autoPlay
+												loop
+												muted
+												playsInline
+												className='w-full h-full object-cover object-top bg-black'
+											/>
+										) : (
+											<Image
+												src={preview.src}
+												alt={
+													preview.title ||
+													`${project.title} screen ${idx + 1}`
+												}
+												fill
+												sizes='(max-width: 640px) 280px, 320px'
+												className='object-cover object-top'
+												priority={idx === 0}
+											/>
+										)}
 									</SwiperSlide>
 								))}
 							</Swiper>
@@ -170,19 +186,19 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 	return (
 		<div className='w-full rounded-2xl bg-[#141318] border border-white/10 shadow-2xl relative overflow-hidden'>
 			{/* Apple macOS Window Header */}
-			<div className='flex items-center justify-between px-5 py-3.5 border-b border-white/10 text-xs text-white/50 bg-white/[0.02] gap-3'>
+			<div className='relative flex items-center justify-between px-5 py-3.5 border-b border-white/10 text-xs text-white/50 bg-white/[0.02] min-h-[48px]'>
 				{/* Traffic Light Dots */}
-				<div className='flex items-center gap-2 shrink-0'>
+				<div className='flex items-center gap-2 shrink-0 z-10'>
 					<span className='size-3 rounded-full bg-[#ff5f56] inline-block shadow-sm' />
 					<span className='size-3 rounded-full bg-[#ffbd2e] inline-block shadow-sm' />
 					<span className='size-3 rounded-full bg-[#27c93f] inline-block shadow-sm' />
 				</div>
 
-				{/* Dynamic Browser Address Bar */}
-				<div className='font-mono flex items-center justify-center max-w-sm sm:max-w-md w-full truncate'>
+				{/* Dynamic Browser Address Bar (Always Centered) */}
+				<div className='absolute left-1/2 -translate-x-1/2 max-w-[200px] xs:max-w-[260px] sm:max-w-sm md:max-w-md w-full flex items-center justify-center font-mono pointer-events-none z-20 px-2'>
 					{project.isInternal ? (
-						<div className='flex items-center gap-2 text-white/60 bg-white/5 px-3 py-1 rounded-md border border-white/10 text-xs'>
-							<FaLock className='text-accent text-[11px]' />
+						<div className='flex items-center gap-2 text-white/60 bg-white/5 px-3 py-1 rounded-md border border-white/10 text-xs truncate pointer-events-auto max-w-full'>
+							<FaLock className='text-accent text-[11px] shrink-0' />
 							<span className='truncate'>{displayUrl}</span>
 						</div>
 					) : currentPreview?.url ? (
@@ -190,14 +206,19 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 							href={currentPreview.url}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/40 px-3.5 py-1 rounded-md text-white/80 hover:text-accent transition-all group/url text-xs truncate shadow-sm'
+							className='flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/40 px-3.5 py-1 rounded-md text-white/80 hover:text-accent transition-all group/url text-xs truncate shadow-sm pointer-events-auto max-w-full'
 							title={`Visit ${currentPreview.url}`}>
-							<span className={cn('size-1.5 rounded-full shrink-0', currentPreview.online ? 'bg-accent' : 'bg-red-500')} />
+							<span
+								className={cn(
+									'size-1.5 rounded-full shrink-0',
+									currentPreview.online ? 'bg-accent' : 'bg-red-500'
+								)}
+							/>
 							<span className='truncate'>{displayUrl}</span>
 							<FaExternalLinkAlt className='text-[10px] text-white/40 group-hover/url:text-accent transition-colors shrink-0' />
 						</a>
 					) : (
-						<div className='flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1 rounded-md text-white/60 text-xs truncate'>
+						<div className='flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1 rounded-md text-white/60 text-xs truncate pointer-events-auto max-w-full'>
 							<span className='size-1.5 rounded-full bg-white/30 shrink-0' />
 							<span className='truncate'>{displayUrl}</span>
 						</div>
@@ -205,14 +226,14 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 				</div>
 
 				{/* Right Side Action or Tag */}
-				<div className='flex items-center gap-2 shrink-0'>
+				<div className='flex items-center gap-2 shrink-0 z-10'>
 					{currentPreview?.url ? (
 						<a
 							href={currentPreview.url}
 							target='_blank'
 							rel='noopener noreferrer'
 							className='text-[10px] uppercase font-mono tracking-wider bg-accent/10 hover:bg-accent hover:text-primary text-accent border border-accent/20 px-2.5 py-1 rounded transition-all inline-flex items-center gap-1.5 font-medium'>
-							<span>Visit Site</span>
+							<span className='hidden xs:inline'>Visit Site</span>
 							<BsArrowUpRight className='text-[10px]' />
 						</a>
 					) : (
@@ -229,15 +250,27 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 			{hasImages ? (
 				<div className='relative w-full bg-black/40 overflow-hidden group/window'>
 					{previews.length === 1 ? (
-						<div className='relative w-full aspect-video md:aspect-[16/10] overflow-hidden'>
-							<Image
-								src={previews[0].src}
-								alt={previews[0].title || project.title}
-								fill
-								sizes='(max-width: 1280px) 100vw, 1200px'
-								className='object-cover object-top'
-								priority
-							/>
+						<div className='relative w-full aspect-video md:aspect-[16/10] overflow-hidden bg-black flex items-center justify-center'>
+							{isVideoFile(previews[0].src) ? (
+								<video
+									src={previews[0].src}
+									autoPlay
+									loop
+									muted
+									playsInline
+									controls
+									className='w-full h-full object-contain bg-black'
+								/>
+							) : (
+								<Image
+									src={previews[0].src}
+									alt={previews[0].title || project.title}
+									fill
+									sizes='(max-width: 1280px) 100vw, 1200px'
+									className='object-cover object-top'
+									priority
+								/>
+							)}
 						</div>
 					) : (
 						<div className='relative w-full'>
@@ -252,18 +285,30 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 								{previews.map((preview, idx) => (
 									<SwiperSlide
 										key={preview.src}
-										className='relative w-full h-full bg-black/40 overflow-hidden'>
-										<Image
-											src={preview.src}
-											alt={
-												preview.title ||
-												`${project.title} preview ${idx + 1}`
-											}
-											fill
-											sizes='(max-width: 1280px) 100vw, 1200px'
-											className='object-cover object-top'
-											priority={idx === 0}
-										/>
+										className='relative w-full h-full bg-black overflow-hidden flex items-center justify-center'>
+										{isVideoFile(preview.src) ? (
+											<video
+												src={preview.src}
+												autoPlay
+												loop
+												muted
+												playsInline
+												controls
+												className='w-full h-full object-contain bg-black'
+											/>
+										) : (
+											<Image
+												src={preview.src}
+												alt={
+													preview.title ||
+													`${project.title} preview ${idx + 1}`
+												}
+												fill
+												sizes='(max-width: 1280px) 100vw, 1200px'
+												className='object-cover object-top'
+												priority={idx === 0}
+											/>
+										)}
 									</SwiperSlide>
 								))}
 							</Swiper>
