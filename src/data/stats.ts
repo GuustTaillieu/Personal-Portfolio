@@ -6,10 +6,10 @@ type Stat = {
 const stats = [
 	{
 		text: 'Year of experience',
-		number: 5,
+		number: new Date().getFullYear() - 2021,
 	},
 	{
-		text: 'Projects completed',
+		text: 'Projects in production',
 		number: 6,
 	},
 	{

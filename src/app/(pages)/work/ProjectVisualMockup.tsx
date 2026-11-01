@@ -188,17 +188,16 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 			{/* Apple macOS Window Header */}
 			<div className='relative flex items-center justify-between px-5 py-3.5 border-b border-white/10 text-xs text-white/50 bg-white/[0.02] min-h-[48px]'>
 				{/* Traffic Light Dots */}
-				<div className='flex items-center gap-2 shrink-0 z-10'>
+				<div className='flex items-center gap-2 shrink-0 z-10 max-md:hidden'>
 					<span className='size-3 rounded-full bg-[#ff5f56] inline-block shadow-sm' />
 					<span className='size-3 rounded-full bg-[#ffbd2e] inline-block shadow-sm' />
 					<span className='size-3 rounded-full bg-[#27c93f] inline-block shadow-sm' />
 				</div>
 
 				{/* Dynamic Browser Address Bar (Always Centered) */}
-				<div className='absolute left-1/2 -translate-x-1/2 max-w-[200px] xs:max-w-[260px] sm:max-w-sm md:max-w-md w-full flex items-center justify-center font-mono pointer-events-none z-20 px-2'>
+				<div className='md:absolute md:left-1/2 md:-translate-x-1/2 max-w-[200px] xs:max-w-[260px] sm:max-w-sm md:max-w-md md:w-full flex items-center justify-center font-mono pointer-events-none z-20 px-2'>
 					{project.isInternal ? (
 						<div className='flex items-center gap-2 text-white/60 bg-white/5 px-3 py-1 rounded-md border border-white/10 text-xs truncate pointer-events-auto max-w-full'>
-							<FaLock className='text-accent text-[11px] shrink-0' />
 							<span className='truncate'>{displayUrl}</span>
 						</div>
 					) : currentPreview?.url ? (
@@ -236,11 +235,14 @@ export const ProjectVisualMockup = ({ project }: Props) => {
 							<span className='hidden xs:inline'>Visit Site</span>
 							<BsArrowUpRight className='text-[10px]' />
 						</a>
+					) : project.isInternal ? (
+						<span className='inline-flex items-center gap-1 text-[11px] font-mono text-white/40 bg-white/5 px-2 py-0.5 rounded'>
+							<FaLock className='text-[9px] text-accent/80' />
+							<span>NDA</span>
+						</span>
 					) : (
 						<span className='text-[10px] uppercase font-mono tracking-wider bg-white/5 px-2.5 py-1 rounded text-white/60'>
-							{project.isInternal
-								? 'NDA Protected'
-								: project.category.split('·')[0].trim()}
+							{project.category.split('·')[0].trim()}
 						</span>
 					)}
 				</div>

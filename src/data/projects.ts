@@ -52,7 +52,7 @@ export const projects: Project[] = [
 	{
 		id: 'brightanalytics',
 		num: '01',
-		title: 'Custom Internal Time-Registration Platform',
+		title: 'Time-Registration Platform',
 		company: 'BrightAnalytics',
 		category: 'Internship · Full-Stack Web App',
 		period: '2025 (3 months)',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
 	{
 		id: 'sweet-mustard',
 		num: '02',
-		title: 'Visitor Onboarding Reception Tablet App',
+		title: 'Visitor Onboarding Kiosk',
 		company: 'Sweet Mustard',
 		category: 'Internship · Hexagonal Architecture',
 		period: '2024 (3 months)',
@@ -120,7 +120,7 @@ export const projects: Project[] = [
 	{
 		id: 'tapup',
 		num: '03',
-		title: 'TapUp Micro-Learning Mobile Application',
+		title: 'Micro-Learning Mobile Application',
 		company: 'TapUp (Storything)',
 		category: 'Student Venture · Mobile & Backend',
 		period: '2023 - 2024',
@@ -185,11 +185,11 @@ export const projects: Project[] = [
 	{
 		id: 'sundo',
 		num: '04',
-		title: 'Sundo Scrollytelling Web Experience',
+		title: 'Sundo Scrollytelling Website',
 		company: 'Sundo',
 		category: 'Client Project · Award Winner',
 		period: '2021',
-		role: 'Solo Web Developer & UI/UX Designer',
+		role: 'Developer & Designer under Zoomers',
 		studyContext:
 			'Created during my first year of higher education programming studies (2021), entirely engineered in Vanilla HTML, CSS, and JavaScript.',
 		shortDescription:
@@ -233,7 +233,7 @@ export const projects: Project[] = [
 	{
 		id: 'zoomers',
 		num: '05',
-		title: 'UI/UX & Visual Design Portfolio',
+		title: 'Visual Design Portfolio',
 		company: 'Zoomers',
 		category: 'Student Agency · 4+ Years UI/UX',
 		period: '2021 - 2024 (3+ years)',
