@@ -25,34 +25,33 @@ const ServicesPage = (props: Props) => {
 									ease: 'easeInOut',
 								},
 							}}
-							className='flex-1 flex flex-col justify-center gap-6 group'
 							key={service.num}>
-							{/* TOP */}
-							<div className='w-full flex justify-between items-center'>
-								<div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>
-									{service.num}
+							<TransitionLink
+								href={ROUTES.CONTACT_WITH_SERVICE(service.num)}
+								className='flex-1 flex flex-col justify-center gap-6 group cursor-pointer block'>
+								{/* TOP */}
+								<div className='w-full flex justify-between items-center'>
+									<div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500 select-none'>
+										{service.num}
+									</div>
+									<div className='flex justify-center items-center border border-white/20 size-14 rounded-full group-hover:border-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500'>
+										<BsArrowDownRight className='text-white text-2xl group-hover:text-primary group-hover:-rotate-45 transition-all duration-500' />
+									</div>
 								</div>
-								<TransitionLink
-									href={ROUTES.CONTACT_WITH_SERVICE(
-										service.num
-									)}
-									className='flex justify-center items-center hover:-rotate-[45deg] border-white border size-14 rounded-full group-hover:border-accent  transition-all duration-500'>
-									<BsArrowDownRight className='text-white text-2xl group-hover:text-accent transition-all duration-500' />
-								</TransitionLink>
-							</div>
 
-							{/* HEADING */}
-							<h2 className='text-4xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500'>
-								{service.title}
-							</h2>
+								{/* HEADING */}
+								<h2 className='text-[28px] sm:text-3xl xl:text-4xl font-bold leading-tight text-white group-hover:text-accent transition-all duration-500'>
+									{service.title}
+								</h2>
 
-							{/* DESCRIPTION */}
-							<p className='text-white/60'>
-								{service.description}
-							</p>
+								{/* DESCRIPTION */}
+								<p className='text-white/60 leading-relaxed text-sm sm:text-base'>
+									{service.description}
+								</p>
 
-							{/* BORDER */}
-							<div className='border-b border-white/20'></div>
+								{/* BORDER */}
+								<div className='border-b border-white/20 group-hover:border-accent/50 transition-colors duration-500'></div>
+							</TransitionLink>
 						</motion.div>
 					))}
 				</motion.div>

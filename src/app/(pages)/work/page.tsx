@@ -1,7 +1,13 @@
-type Props = {};
+import { projects } from '@/data/projects';
+import { WorkGrid } from './WorkGrid';
+import { Metadata } from 'next';
 
-const WorkPage = (props: Props) => {
-	return <div>WorkPage</div>;
+export const metadata: Metadata = {
+	title: 'Projects & Work | Guust - Portfolio',
+	description:
+		'Explore software engineering projects, internal enterprise tools, mobile apps, and UI/UX design systems created by Guust Taillieu during his studies.',
 };
 
-export default WorkPage;
+export default function WorkPage() {
+	return <WorkGrid />;
+}

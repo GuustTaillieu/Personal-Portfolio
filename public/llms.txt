@@ -4,7 +4,7 @@
 
 ## Personal Information
 - **Name**: Guust Taillieu
-- **Role**: Software Developer / Full-Stack Developer
+- **Role**: Software Developer / Full-Stack Developer & UI/UX Designer
 - **Nationality**: Belgian
 - **Languages**: Dutch, English
 - **Email**: guust@taillieusauw.net
@@ -15,21 +15,75 @@
 - **LinkedIn**: https://www.linkedin.com/in/guust-taillieu/
 
 ## About Guust
-Guust Taillieu is a 23-year-old full-stack developer who crafts user-friendly and functional software, balancing front-end and back-end engineering. When not coding, Guust enjoys bouldering, exploring nature, and building personal projects.
+Guust Taillieu is a 23-year-old full-stack developer who crafts user-friendly and functional software, balancing front-end and back-end engineering with ~4 years of hands-on UI/UX design experience. When not coding, Guust enjoys bouldering, exploring nature, and building personal projects.
+
+All featured projects and internships were completed **during his higher education studies** (2021 – 2026) at Howest Bruges.
 
 ## Services
-1. **Web Development**: Creating modern, performant, and responsive web applications using cutting-edge technologies like Next.js, React, and TypeScript.
-2. **UI/UX Design**: Designing clean, intuitive, and modern interfaces in Figma and prototyping interactive user journeys.
-3. **Mentoring & Tutoring**: Over 4 years of experience tutoring and mentoring students in programming, cybersecurity, and computer science concepts.
-4. **Cyber Security**: Practical security expertise specializing in application security, penetration testing fundamentals, and defensive engineering.
+1. **Web Development**: Building modern, engaging, and secure web applications with high performance.
+2. **Mobile App Development**: Developing smooth, cross-platform mobile apps for iOS and Android with clean UI.
+3. **Desktop App Development**: Engineering fast, reliable desktop apps with native integration and security.
+4. **Automation Development**: Creating custom automation scripts and bots to eliminate repetitive tasks.
+
+## Featured Projects (Built During Studies)
+
+### 1. BrightAnalytics — Custom Internal Time-Registration Platform
+- **URL**: https://taillieusauw.net/work/brightanalytics
+- **Company**: BrightAnalytics (3-month internship, 2025)
+- **Role**: End-to-End Owner (UI/UX Design, Vue.js Frontend, Laravel Backend)
+- **Study Context**: Built during Guust's 3-month internship at BrightAnalytics while completing his Software Engineering bachelor degree at Howest Bruges.
+- **Stack**: Vue.js, Laravel, PHP, Google Calendar API, Tailwind CSS
+- **The Challenge**: The company was frustrated with rigid, hard-to-read table-based time tracking that forced employees to manually type start times, end times, and break durations.
+- **The Solution**: Built an interactive drag-and-drop calendar interface from scratch across 2-week agile sprints. Allowed employees to drag and drop time slots, save recurring favorite blocks, sync directly with Google Calendar, and check teammates' schedules.
+- **Proven Impact**: Last time Guust heard, the tool was still actively used across the entire company. Two internal company polls confirmed significant reduction in frustration, turning a tedious chore into a simple two-second drag-and-drop action.
+- **Status**: Internal Enterprise Software (Production verified; proprietary NDA).
+
+### 2. Sweet Mustard — Visitor Onboarding Tablet App
+- **URL**: https://taillieusauw.net/work/sweet-mustard
+- **Company**: Sweet Mustard / Cronos Group (3-month internship, 2024)
+- **Role**: Backend Developer (99% Backend in Spring Boot, flexible on Frontend)
+- **Study Context**: Developed during Guust's 3-month internship at Sweet Mustard, coached by Cronos Group professionals during his higher education studies.
+- **Stack**: Spring Boot (Java), Hexagonal Architecture (Ports and Adapters), React, Microsoft Azure Cloud, Scrum / Agile
+- **The Challenge**: Visitors arriving at the Sweet Mustard office often felt lost or confused upon arrival, needing assistance to reach their contact person in a large, bustling office environment.
+- **The Solution**: Created a dedicated onboarding kiosk app deployed on a tablet in the reception area to guide visitors through check-in and alert their hosts promptly. Built in a team of 5 student developers using Hexagonal Architecture for testability and maintainability.
+- **Learnings & Architecture**: Managed in a structured Scrum environment with daily standups, retrospectives, and 2-week sprints. Deep dive into enterprise Hexagonal Architecture, Spring Boot production code standards, and Azure cloud services.
+- **Status**: Internal Enterprise Application (Cronos Group confidentiality).
+
+### 3. TapUp — Micro-Learning Mobile Application
+- **URL**: https://taillieusauw.net/work/tapup
+- **Company**: TapUp / Storything (2023 – 2024)
+- **Role**: End-to-End Product Engineer & Designer
+- **Study Context**: Engineered as a student project under Storything, taking full ownership of product thinking, Figma UI/UX, React Native mobile client, and Spring Boot VPS backend.
+- **Stack**: React Native, Spring Boot, Java, TypeScript, Firebase, Figma, VPS Deployment
+- **The Challenge**: Companies lack time to train warehouse/store employees one-on-one on how to operate heavy machinery (such as forklifts in retail chains like Colruyt) or specialized tools. Traditional training was slow, paper-based, and difficult to verify.
+- **The Solution**: Designed and engineered an end-to-end mobile learning product. Content is organized in chapters formatted like Instagram stories with short instructional videos. Employees complete chapters, take a verification quiz, and earn qualification medals upon passing.
+- **Architecture Refactor**: Initially recommended to run directly on React Native with the Firebase client SDK, which became heavy and sluggish on mobile devices. Guust recommended architectural separation, extracted the business logic, and rewrote a dedicated backend from scratch using Java Spring Boot, deployed on a custom VPS for both iOS and Android.
+
+### 4. Sundo — Scrollytelling Web Experience (Award Winner)
+- **URL**: https://taillieusauw.net/work/sundo
+- **Company / Client**: Sundo (2021)
+- **Role**: Solo Web Developer & UI/UX Designer
+- **Study Context**: Created during Guust's first year of higher education programming studies (2021), entirely engineered in pure Vanilla HTML5, CSS3, and JavaScript without external frameworks.
+- **Stack**: Vanilla JavaScript, HTML5, CSS3, 3D Image Sequence, Scrollytelling, Figma, Multilingual i18n
+- **The Challenge**: Sundo created an innovative smart sunscreen dispenser that dispenses lotion based on real-time UV and temperature data. They needed an unforgettable digital presence to showcase their hardware and product story.
+- **The Solution**: Working solo before learning modern frameworks, Guust designed and built an interactive scrollytelling platform. Visitors land on an interactive page with the sun in the center; as they scroll, the sun rises, narrative typography appears, and they transition to a 3D dispenser that rotates 360 degrees via a scroll-driven image sequence, dynamically updating features. Also engineered trilingual support (Dutch, French, English) and custom contact flows.
+- **Industry Award**: Recognized with a Website of the Month Award by DesignRush (designrush.com).
+
+### 5. Zoomers — UI/UX & Visual Design Portfolio
+- **URL**: https://taillieusauw.net/work/zoomers
+- **Company**: Zoomers Student Agency (2021 – 2024)
+- **Role**: UI/UX & Visual Designer
+- **Study Context**: Crafted over 3+ years as a visual and UI/UX designer with the Zoomers student company, beginning in the first year of programming studies and building 4+ years of UI/UX craft.
+- **Stack**: Figma, Photoshop, UI/UX Prototyping, Design Systems, Wireframing
+- **The Details**: Over 3 years contributing interface redesigns, reusable component design systems, and wireframes for client products, developing 4+ years of deep UI/UX craft.
 
 ## Experience
 - **Online Tech Tutor & Mentor** (2022 – Present): Mentoring students online in software development, algorithms, web technologies, and security practices.
-- **BrightAnalytics** (2025, 3 months): Trainee Full Stack Developer.
-- **Sweet Mustard** (2024, 3 months): Trainee Backend Developer.
-- **TapUp** (2023 – 2024): App Engineer & Designer.
-- **Storything** (2024 – 2025): Full Stack Developer.
-- **Zoomers** (2021 – 2024): Designer.
+- **BrightAnalytics** (2025, 3 months): Trainee Full Stack Developer (Time-Registration System).
+- **Sweet Mustard** (2024, 3 months): Trainee Backend Developer (Visitor Onboarding Kiosk, Hexagonal Architecture).
+- **TapUp** (2023 – 2024): App Engineer & Designer (Micro-Learning Mobile Application).
+- **Storything** (2024 – 2025): Full Stack Developer (Client Web Platforms & Bug Fixes).
+- **Zoomers** (2021 – 2024): Designer (UI/UX & Design Systems).
 
 ## Education
 - **Howest Bruges** (2025 – 2026): Bachelor Cybersecurity. Specializing in systems security, network defenses, cryptography, and defensive engineering.
@@ -37,9 +91,9 @@ Guust Taillieu is a 23-year-old full-stack developer who crafts user-friendly an
 - **IBA Denmark** (2023, 6 months): Erasmus+ study abroad program gaining international software engineering and cross-cultural teamwork experience.
 
 ## Key Skills & Technologies
-- **Core Languages**: TypeScript, JavaScript, HTML5, CSS3, PHP, Python, SQL, C#
-- **Frameworks & Libraries**: Next.js, React, Node.js, Tailwind CSS, Framer Motion, GSAP, Radix UI / Shadcn UI
-- **Design & Tools**: Figma, Photoshop, VS Code, Git, GitHub, Vercel
+- **Core Languages**: TypeScript, JavaScript, HTML5, CSS3, PHP, Python, Java, SQL, C#
+- **Frameworks & Libraries**: Next.js, React, React Native, Vue.js, Laravel, Spring Boot, Node.js, Tailwind CSS, Framer Motion, GSAP, Radix UI
+- **Design & Cloud**: Figma, Photoshop, Azure, Vercel, VPS, Git, GitHub, VS Code
 
 ## Key Pages & Direct URLs
 - Home: https://taillieusauw.net/
@@ -49,6 +103,11 @@ Guust Taillieu is a 23-year-old full-stack developer who crafts user-friendly an
 - Resume (Education): https://taillieusauw.net/resume?tab=education
 - Resume (Skills): https://taillieusauw.net/resume?tab=skills
 - Resume (Website Architecture): https://taillieusauw.net/resume?tab=website
-- Events & Projects: https://taillieusauw.net/events
+- Projects & Work (Overview): https://taillieusauw.net/work
+- Projects (BrightAnalytics): https://taillieusauw.net/work/brightanalytics
+- Projects (Sweet Mustard): https://taillieusauw.net/work/sweet-mustard
+- Projects (TapUp): https://taillieusauw.net/work/tapup
+- Projects (Sundo): https://taillieusauw.net/work/sundo
+- Projects (Zoomers): https://taillieusauw.net/work/zoomers
+- Events: https://taillieusauw.net/events
 - Contact: https://taillieusauw.net/contact
-

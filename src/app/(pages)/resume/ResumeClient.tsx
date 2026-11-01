@@ -129,7 +129,7 @@ const ResumeClient = ({ initialTab }: Props) => {
 								<p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
 									{experience.description}
 								</p>
-								<ScrollArea className='h-[400px] max-md:hidden'>
+								<ScrollArea className='h-[480px] max-md:hidden'>
 									<ExperienceList />
 								</ScrollArea>
 								<ExperienceList className='md:hidden' />

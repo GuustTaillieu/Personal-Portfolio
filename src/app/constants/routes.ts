@@ -12,6 +12,10 @@ export const LINKS = [
 		path: '/resume',
 	},
 	{
+		name: 'work',
+		path: '/work',
+	},
+	{
 		name: 'events',
 		path: '/events',
 	},
@@ -65,4 +69,6 @@ export const ROUTES = {
 	RESUME: '/resume',
 	RESUME_WITH_TAB: (tab: string) => `/resume?tab=${tab}`,
 	WORK: '/work',
+	PROJECT: (id: string) => `/work/${id}`,
+	WORK_WITH_PROJECT: (project: string) => `/work/${project}`,
 } as const;

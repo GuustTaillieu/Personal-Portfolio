@@ -9,25 +9,25 @@ const services: Service[] = [
 		num: '01',
 		title: 'Web Development',
 		description:
-			'I can help you build engaging websites that will help you reach potential customers and grow your business.',
+			'I build modern, engaging, and secure web applications with high performance.',
 	},
 	{
 		num: '02',
 		title: 'Mobile App Development',
 		description:
-			'I can help you develop user-friendly mobile applications that will help you reach potential customers on the go.',
+			'I develop smooth, cross-platform mobile apps for iOS and Android with clean UI.',
 	},
 	{
 		num: '03',
-		title: 'Front End Development',
+		title: 'Desktop App Development',
 		description:
-			'I can help you build interactive and engaging user interfaces that satisfy your users and keep them coming back.',
+			'I engineer fast, reliable desktop apps with native integration and security.',
 	},
 	{
 		num: '04',
-		title: 'Back End Development',
+		title: 'Process Automation Development',
 		description:
-			'I can help you build robust and scalable back-end systems that will help you manage your business efficiently.',
+			'I create custom automation scripts and bots to eliminate repetitive tasks.',
 	},
 ];
 

@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { events } from '@/data/events';
+import { projects } from '@/data/projects';
 import { RESUME_TABS } from '@/app/constants/routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		},
 		{
 			url: `${baseUrl}/resume`,
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 0.9,
+		},
+		{
+			url: `${baseUrl}/work`,
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.9,
@@ -49,6 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority: 0.8,
 	}));
 
+	// Individual project pages for crawlers
+	const projectRoutes: MetadataRoute.Sitemap = projects.map((p) => ({
+		url: `${baseUrl}/work/${p.id}`,
+		lastModified: new Date(),
+		changeFrequency: 'monthly',
+		priority: 0.8,
+	}));
+
 	// Individual event pages
 	const eventRoutes: MetadataRoute.Sitemap = events.map((event) => ({
 		url: `${baseUrl}/events/${event.num}`,
@@ -57,6 +72,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		priority: 0.7,
 	}));
 
-	return [...staticRoutes, ...resumeTabRoutes, ...eventRoutes];
+	return [
+		...staticRoutes,
+		...resumeTabRoutes,
+		...projectRoutes,
+		...eventRoutes,
+	];
 }
-
