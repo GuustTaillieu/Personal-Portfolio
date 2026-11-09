@@ -81,7 +81,7 @@ const ResumeClient = ({ initialTab }: Props) => {
 					value={activeTab}
 					onValueChange={handleTabChange}
 					className='flex flex-col xl:flex-row gap-[60px]'>
-					<TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
+					<TabsList className='flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 xl:sticky xl:top-8 xl:self-start'>
 						{TAB_CONFIG.map((tab) => (
 							<motion.div
 								key={tab.value}
@@ -129,10 +129,7 @@ const ResumeClient = ({ initialTab }: Props) => {
 								<p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
 									{experience.description}
 								</p>
-								<ScrollArea className='h-[480px] max-md:hidden'>
-									<ExperienceList />
-								</ScrollArea>
-								<ExperienceList className='md:hidden' />
+								<ExperienceList />
 							</div>
 						</TabsContent>
 

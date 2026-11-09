@@ -91,9 +91,10 @@ All featured projects and internships were completed **during his higher educati
 - **IBA Denmark** (2023, 6 months): Erasmus+ study abroad program gaining international software engineering and cross-cultural teamwork experience.
 
 ## Key Skills & Technologies
-- **Core Languages**: TypeScript, JavaScript, HTML5, CSS3, PHP, Python, Java, SQL, C#
-- **Frameworks & Libraries**: Next.js, React, React Native, Vue.js, Laravel, Spring Boot, Node.js, Tailwind CSS, Framer Motion, GSAP, Radix UI
-- **Design & Cloud**: Figma, Photoshop, Azure, Vercel, VPS, Git, GitHub, VS Code
+- **Backend, Systems & Data**: Go (Golang), Spring Boot, NestJS, TypeScript, Effect.ts, .NET, Node.js, Python, Kotlin, Laravel, Apache Kafka, PostgreSQL, Redis, MongoDB, SQLite
+- **DevOps, Security & Tooling**: Docker, GitHub Actions (CI/CD), Microsoft Azure, OWASP, Burp Suite, OAuth 2.0 / OIDC / JWT, Kali Linux, Wireshark, Linux, Bash, Git, GitHub Copilot (AI-Driven Development)
+- **Frontend, Mobile & Design**: React, Next.js, TanStack Start, Vue.js, Expo (React Native), Jetpack Compose (Android Native / Kotlin), JavaScript, Figma, Tailwind CSS
+- **Architecture, Testing & APIs**: Domain-Driven Design (DDD), Hexagonal / Clean Architecture, Event-Driven Microservices, Outbox Pattern, Test-Driven Development (TDD), Integration Testing, Contract Testing, REST, gRPC, WebSockets, GraphQL
 
 ## Key Pages & Direct URLs
 - Home: https://taillieusauw.net/
